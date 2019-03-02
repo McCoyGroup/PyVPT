@@ -1,7 +1,7 @@
 """The coordinate transform class defines an architecture to transform coordinates
 
 """
-from ..Common import *
+import numpy as np
 
 ######################################################################################################
 ##
@@ -18,10 +18,14 @@ class CoordinateTransform:
 
     def __init__(self, transforms):
         self.transform_list = [self.parse_transform(tf) for tf in transforms]
+        self.condense_transforms()
+
+    def condense_transforms(self):
+        raise NotImplemented
 
     @staticmethod
     def parse_transform(tf):
-        pass
+        return NotImplemented
 
     @staticmethod
     def matrix_transform(mat):
