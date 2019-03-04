@@ -1,5 +1,7 @@
 from .CoordinateSystemConverter import CoordinateSystemConverter
 from .CommonCoordinateSystems import CartesianCoordinates3D, ZMatrixCoordinates
+from .Utilities.VectorMath import vec_norms, vec_angles
+import numpy as np
 # this import gets bound at load time, so unfortunately PyCharm can't know just yet
 # what properties its class will have and will try to claim that the files don't exist
 
@@ -26,28 +28,54 @@ class CartesianToZMatrixConverter(CoordinateSystemConverter):
             normalized_list = zip(
                 range(ncoords),
                 range(-1, ncoords-1),
-                range(ncoords-2, ncoords-2)
+                range(ncoords-2, ncoords-2),
+                range(ncoords-3, ncoords-2)
             )
         else:
             normalized_list = [None] * len(order_list)
             for i, el in enumerate(order_list):
                 if isinstance(el, int):
-                    triple = (
+                    spec = (
                         el,
-                        normalized_list[i-1] if i > 0 else -1,
-                        normalized_list[i-2] if i > 1 else -1
+                        normalized_list[i-1][0] if i > 0 else -1,
+                        normalized_list[i-2][0] if i > 1 else -1,
+                        normalized_list[i-3][0] if i > 2 else -1
                     )
                 else:
-                    triple = tuple(el)
-                    if len(triple) < 3:
-                        raise ValueError("z-matrix conversion triple {} not long enough".format(el))
+                    spec = tuple(el)
+                    if len(spec) < 4:
+                        raise ValueError("z-matrix conversion spec {} not long enough".format(el))
 
-                normalized_list[i] = triple
+                normalized_list[i] = spec
 
-        raise normalized_list
+        return np.array(normalized_list)
+
+    @staticmethod
+    def get_dists(centers, points):
+        return vec_norms(centers-points)
+    @staticmethod
+    def get_angles(centers, lefts, rights):
+        # need to look up again what the convention is for which atom is the central one...
+        v1s = centers-lefts
+        v2s = centers-rights
+        return vec_angles(v1s, v2s)[0]
+    @staticmethod
+    def get_diheds(centers, firsts, seconds, thirds):
+        v1s = centers-lefts
+        v2s = centers-rights
+        return vec_angles(v1s, v2s)[0]
 
     def convert(self, coords, ordering=None, use_rad=True, **kw):
-        """
+        """The ordering should be specified like:
+
+        [
+            [n1],
+            [n2, n1]
+            [n3, n1/n2, n1/n2]
+            [n4, n1/n2/n3, n1/n2/n3, n1/n2/n3]
+            [n5, ...]
+            ...
+        ]
 
         :param coords:    array of cartesian coordinates
         :type coords:     np.ndarray
@@ -55,8 +83,34 @@ class CartesianToZMatrixConverter(CoordinateSystemConverter):
         :type use_rad:    bool
         :param ordering:  optional ordering parameter for the z-matrix
         :type ordering:   None or tuple of ints or tuple of tuple of ints
-        :param kw:        ignore key-word arguments
+        :param kw:        ignored key-word arguments
         :type kw:
         """
-        pass
+        ncoords = len(coords)
+        ol = self.canonicalize_order_list(ncoords, ordering)
+        ordering_map = {
+                old:new for old, new in zip(
+                    (a[0] for a in ol),
+                    range(ncoords)
+                )
+        }
+        targ = [None]*(ncoords-1)
+        # need to check against the cases of like 1, 2, 3 atom molecules
+        # annoying but not hard
+        dists = self.get_dists(
+            coords[ol[1:, 0]],
+            coords[ol[1:, 1]]
+        )
+        angle_specs = self.get_angles(
+            coords[ol[2:, 0]],
+            coords[ol[2:, 1]],
+            coords[ol[2:, 2]]
+        )
+        dihed_specs = self.get_diheds(
+            coords[ol[3:, 0]],
+            coords[ol[3:, 1]],
+            coords[ol[3:, 2]],
+            coords[ol[3:, 3]]
+        )
+
 

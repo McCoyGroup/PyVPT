@@ -49,6 +49,14 @@ def vec_norms(vecs):
 
 ################################################
 #
+#       vec_crosses
+#
+
+def vec_crosses(vecs1, vecs2):
+    return np.cross(vecs1, vecs2)
+
+################################################
+#
 #       vec_cos
 #
 
@@ -71,7 +79,7 @@ def vec_cos(vectors1, vectors2):
 #       vec_sins
 #
 
-def vec_sincs(vectors1, vectors2):
+def vec_sins(vectors1, vectors2):
     """Gets the sin of the angle between two vectors
 
     :param vectors1:
@@ -79,7 +87,7 @@ def vec_sincs(vectors1, vectors2):
     :param vectors2:
     :type vectors2: np.ndarray
     """
-    crosses   = np.cross(vectors1, vectors2)
+    crosses= vec_crosses(vectors1, vectors2)
     norms1 = vec_norms(vectors1)
     norms2 = vec_norms(vectors2)
 
@@ -98,9 +106,11 @@ def vec_angles(vectors1, vectors2):
     :type vectors1: np.ndarray
     :param vectors2:
     :type vectors2: np.ndarray
+    :return: angles and normals between two vectors
+    :rtype: (np.ndarray, np.ndarray)
     """
     dots    = vec_dots(vectors1, vectors2)
-    crosses = np.cross(vectors1, vectors2)
+    crosses = vec_crosses(vectors1, vectors2)
     norms1  = vec_norms(vectors1)
     norms2  = vec_norms(vectors2)
     norm_prod = norms1*norms2

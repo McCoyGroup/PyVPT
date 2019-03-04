@@ -18,4 +18,4 @@ class ScalingTransform(AffineTransform):
         :param scalings:
         :type scalings:
         """
-        super().__init__(np.eye(3), shift=shift)
+        super().__init__(np.diag(scalings), shift=None)
