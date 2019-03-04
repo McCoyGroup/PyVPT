@@ -1,6 +1,6 @@
 from .CoordinateSystemConverter import CoordinateSystemConverter
 from .CommonCoordinateSystems import CartesianCoordinates3D, ZMatrixCoordinates
-from .Utilities.VectorMath import vec_norms, vec_angles
+from .Utilities.VectorMath import vec_norms, vec_angles, pts_dihedrals
 import numpy as np
 # this import gets bound at load time, so unfortunately PyCharm can't know just yet
 # what properties its class will have and will try to claim that the files don't exist
@@ -51,19 +51,17 @@ class CartesianToZMatrixConverter(CoordinateSystemConverter):
         return np.array(normalized_list)
 
     @staticmethod
-    def get_dists(centers, points):
+    def get_dists(points, centers):
         return vec_norms(centers-points)
     @staticmethod
-    def get_angles(centers, lefts, rights):
+    def get_angles(lefts, centers, rights):
         # need to look up again what the convention is for which atom is the central one...
         v1s = centers-lefts
         v2s = centers-rights
         return vec_angles(v1s, v2s)[0]
     @staticmethod
-    def get_diheds(centers, firsts, seconds, thirds):
-        v1s = centers-lefts
-        v2s = centers-rights
-        return vec_angles(v1s, v2s)[0]
+    def get_diheds(points, centers, seconds, thirds):
+        return pts_dihedrals(centers, seconds, thirds, points)
 
     def convert(self, coords, ordering=None, use_rad=True, **kw):
         """The ordering should be specified like:
@@ -88,7 +86,7 @@ class CartesianToZMatrixConverter(CoordinateSystemConverter):
         """
         ncoords = len(coords)
         ol = self.canonicalize_order_list(ncoords, ordering)
-        ordering_map = {
+        om = {
                 old:new for old, new in zip(
                     (a[0] for a in ol),
                     range(ncoords)
@@ -101,16 +99,27 @@ class CartesianToZMatrixConverter(CoordinateSystemConverter):
             coords[ol[1:, 0]],
             coords[ol[1:, 1]]
         )
-        angle_specs = self.get_angles(
+        angles = self.get_angles(
             coords[ol[2:, 0]],
             coords[ol[2:, 1]],
             coords[ol[2:, 2]]
         )
-        dihed_specs = self.get_diheds(
+        diheds = self.get_diheds(
             coords[ol[3:, 0]],
             coords[ol[3:, 1]],
             coords[ol[3:, 2]],
             coords[ol[3:, 3]]
         )
+        final_coords = np.array(
+            [
+                [om[ol[1, 1]], dists[0], 0,            0,         0, 0],
+                [om[ol[2, 1]], dists[0], om[ol[2, 2]], angles[0], 0, 0]
+            ] + [
+                [om[o[1]], d, om[o[2]], a, om[o[3]], h] for
+                    o, d, a, h in zip( ol[3:], dists[2:], angles[1:], diheds)
+            ]
+        )
+        #### should find some way to return the order, right?
+        return final_coords
 
 

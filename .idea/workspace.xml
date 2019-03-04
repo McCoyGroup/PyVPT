@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b76b76cb-ce7f-4344-acde-240669f1c9ad" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Coordinerds/CoordinateTransformations/Utilities/EulerSystem.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coordinerds/CoordinateTransformations/CoordinateMath.py" beforeDir="false" afterPath="$PROJECT_DIR$/Coordinerds/CoordinateTransformations/Utilities/VectorMath.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coordinerds/CoordinateTransformations/ScalingTransform.py" beforeDir="false" afterPath="$PROJECT_DIR$/Coordinerds/CoordinateTransformations/ScalingTransform.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coordinerds/CoordinateTransformations/Utilities/VectorMath.py" beforeDir="false" afterPath="$PROJECT_DIR$/Coordinerds/CoordinateTransformations/Utilities/VectorMath.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Coordinerds/Resources/Converters/CartesianToZMatrix.py" beforeDir="false" afterPath="$PROJECT_DIR$/Coordinerds/Resources/Converters/CartesianToZMatrix.py" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -61,13 +58,13 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="10" />
-          <entry key="py" value="6966" />
+          <entry key="py" value="7833" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="10" />
-          <entry key="Python" value="6966" />
+          <entry key="Python" value="7833" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -111,13 +108,13 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Coordinerds/Resources/Converters/CartesianToZMatrix.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="573">
-              <caret line="110" column="30" lean-forward="true" selection-start-line="110" selection-start-column="30" selection-end-line="110" selection-end-column="30" />
+            <state relative-caret-position="588">
+              <caret line="121" column="61" selection-start-line="121" selection-start-column="61" selection-end-line="121" selection-end-column="61" />
               <folding>
                 <element signature="e#0#64#0" expanded="true" />
-                <marker date="1551695448368" expanded="true" signature="453:458" ph="..." />
-                <marker date="1551695448368" expanded="true" signature="995:2468" ph="..." />
-                <marker date="1551695448368" expanded="true" signature="2198:2468" ph="..." />
+                <marker date="1551741286557" expanded="true" signature="468:473" ph="..." />
+                <marker date="1551741286557" expanded="true" signature="1010:2450" ph="..." />
+                <marker date="1551741286557" expanded="true" signature="2213:2450" ph="..." />
               </folding>
             </state>
           </provider>
@@ -126,8 +123,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Coordinerds/CoordinateTransformations/AffineTransform.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="730">
-              <caret line="101" lean-forward="true" selection-start-line="101" selection-end-line="101" />
+            <state relative-caret-position="228">
+              <caret line="67" lean-forward="true" selection-start-line="67" selection-end-line="67" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
                 <marker date="1551386065206" expanded="true" signature="1058:1309" ph="..." />
@@ -152,12 +149,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Coordinerds/CoordinateTransformations/Utilities/VectorMath.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="108" column="51" lean-forward="true" selection-start-line="108" selection-start-column="51" selection-end-line="108" selection-end-column="51" />
+            <state relative-caret-position="513">
+              <caret line="152" column="17" selection-start-line="152" selection-start-column="4" selection-end-line="152" selection-end-column="17" />
               <folding>
-                <marker date="1551694255181" expanded="true" signature="326:327" ph="..." />
-                <marker date="1551694255181" expanded="true" signature="1824:1825" ph="..." />
-                <marker date="1551694255181" expanded="true" signature="3265:3266" ph="..." />
+                <marker date="1551740889062" expanded="true" signature="326:327" ph="..." />
+                <marker date="1551740889062" expanded="true" signature="1926:1927" ph="..." />
+                <marker date="1551740889062" expanded="true" signature="4434:4435" ph="..." />
               </folding>
             </state>
           </provider>
@@ -276,8 +273,8 @@
         <option value="$PROJECT_DIR$/Coordinerds/CoordinateTransformations/CoordinateTransform.py" />
         <option value="$PROJECT_DIR$/Coordinerds/CoordinateTransformations/CoordinateMath.py" />
         <option value="$PROJECT_DIR$/Coordinerds/CoordinateTransformations/Utilities/EulerSystem.py" />
-        <option value="$PROJECT_DIR$/Coordinerds/CoordinateTransformations/Utilities/VectorMath.py" />
         <option value="$PROJECT_DIR$/Coordinerds/CoordinateTransformations/ScalingTransform.py" />
+        <option value="$PROJECT_DIR$/Coordinerds/CoordinateTransformations/Utilities/VectorMath.py" />
         <option value="$PROJECT_DIR$/Coordinerds/Resources/Converters/CartesianToZMatrix.py" />
       </list>
     </option>
@@ -665,18 +662,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Coordinerds/CoordinateTransformations/Utilities/VectorMath.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="108" column="51" lean-forward="true" selection-start-line="108" selection-start-column="51" selection-end-line="108" selection-end-column="51" />
-          <folding>
-            <marker date="1551694255181" expanded="true" signature="326:327" ph="..." />
-            <marker date="1551694255181" expanded="true" signature="1824:1825" ph="..." />
-            <marker date="1551694255181" expanded="true" signature="3265:3266" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Coordinerds/CoordinateTransformations/Utilities/EulerSystem.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="138">
@@ -699,18 +684,6 @@
             <marker date="1551492208306" expanded="true" signature="558:559" ph="..." />
             <marker date="1551492208306" expanded="true" signature="744:779" ph="..." />
             <marker date="1551492208306" expanded="true" signature="821:857" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Coordinerds/CoordinateTransformations/AffineTransform.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="730">
-          <caret line="101" lean-forward="true" selection-start-line="101" selection-end-line="101" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-            <marker date="1551386065206" expanded="true" signature="1058:1309" ph="..." />
-            <marker date="1551386065206" expanded="true" signature="2212:2391" ph="..." />
           </folding>
         </state>
       </provider>
@@ -745,15 +718,39 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Coordinerds/CoordinateTransformations/AffineTransform.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="67" lean-forward="true" selection-start-line="67" selection-end-line="67" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+            <marker date="1551386065206" expanded="true" signature="1058:1309" ph="..." />
+            <marker date="1551386065206" expanded="true" signature="2212:2391" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Coordinerds/CoordinateTransformations/Utilities/VectorMath.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="152" column="17" selection-start-line="152" selection-start-column="4" selection-end-line="152" selection-end-column="17" />
+          <folding>
+            <marker date="1551740889062" expanded="true" signature="326:327" ph="..." />
+            <marker date="1551740889062" expanded="true" signature="1926:1927" ph="..." />
+            <marker date="1551740889062" expanded="true" signature="4434:4435" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Coordinerds/Resources/Converters/CartesianToZMatrix.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="573">
-          <caret line="110" column="30" lean-forward="true" selection-start-line="110" selection-start-column="30" selection-end-line="110" selection-end-column="30" />
+        <state relative-caret-position="588">
+          <caret line="121" column="61" selection-start-line="121" selection-start-column="61" selection-end-line="121" selection-end-column="61" />
           <folding>
             <element signature="e#0#64#0" expanded="true" />
-            <marker date="1551695448368" expanded="true" signature="453:458" ph="..." />
-            <marker date="1551695448368" expanded="true" signature="995:2468" ph="..." />
-            <marker date="1551695448368" expanded="true" signature="2198:2468" ph="..." />
+            <marker date="1551741286557" expanded="true" signature="468:473" ph="..." />
+            <marker date="1551741286557" expanded="true" signature="1010:2450" ph="..." />
+            <marker date="1551741286557" expanded="true" signature="2213:2450" ph="..." />
           </folding>
         </state>
       </provider>

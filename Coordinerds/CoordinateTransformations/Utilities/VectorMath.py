@@ -52,8 +52,11 @@ def vec_norms(vecs):
 #       vec_crosses
 #
 
-def vec_crosses(vecs1, vecs2):
-    return np.cross(vecs1, vecs2)
+def vec_crosses(vecs1, vecs2, normalize=False):
+    crosses = np.cross(vecs1, vecs2)
+    if normalize:
+        crosses = crosses/vec_norms(crosses)
+    return crosses
 
 ################################################
 #
@@ -118,6 +121,51 @@ def vec_angles(vectors1, vectors2):
     sin_comps = crosses/norm_prod
 
     return (np.arctan2(sin_comps, cos_comps), crosses)
+
+
+################################################
+#
+#       pts_normals
+#
+
+def pts_normals(pts1, pts2, pts3, normalize=True):
+    """Provides the vector normal to the plane of the three points
+
+    :param pts1:
+    :type pts1: np.ndarray
+    :param pts2:
+    :type pts2: np.ndarray
+    :param pts3:
+    :type pts3: np.ndarray
+    :param normalize:
+    :type normalize:
+    :return:
+    :rtype: np.ndarray
+    """
+    # should I normalize these...?
+    return vec_crosses(pts2-pts1, pts3-pts1, normalize=normalize)
+
+################################################
+#
+#       vec_dihedrals
+#
+
+def pts_dihedrals(pts1, pts2, pts3, pts4):
+    """Provides the dihedral angle between pts4 and the plane of the other three vectors
+
+    :param pts1:
+    :type pts1: np.ndarray
+    :param pts2:
+    :type pts2: np.ndarray
+    :param pts3:
+    :type pts3: np.ndarray
+    :return:
+    :rtype:
+    """
+    # should I normalize these...?
+    normals = pts_normals(pts2, pts1, pts3, normalize=False)
+    off_plane_vecs = pts4-pts3
+    return vec_angles(off_plane_vecs, normals)[0]
 
 
 
