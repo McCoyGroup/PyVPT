@@ -46,7 +46,7 @@ class CoordinateSystemConverters:
         env = loader.load(file)
 
         try:
-            converters = env['converters']
+            converters = env.__converters__
         except KeyError:
             raise KeyError("converter at {} missing field '{}'".format(file, "converters"))
 
@@ -82,8 +82,6 @@ class CoordinateSystemConverters:
                     "no rules for converting coordinate system {} to {}".format(system1, system2)
                 )
         return converter
-
-CoordinateSystemConverters._preload_converters()
 
 ######################################################################################################
 ##

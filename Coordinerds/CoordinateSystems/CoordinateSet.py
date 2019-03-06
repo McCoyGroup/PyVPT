@@ -49,10 +49,8 @@ class CoordinateSet:
         """
         coords = self.coords
         if self.multiconfig:
-            from functools import reduce
-            from operator import mul
             base_shape = coords.shape
-            new_shape = (reduce(mul, base_shape[:-2], 1),) + base_shape[-2:]
+            new_shape = (np.product(base_shape[:-2]),) + base_shape[-2:]
             coords = np.reshape(coords, new_shape)
             new_coords = fun(coords)
             revert_shape = tuple(base_shape[:-2]) + new_coords.shape[1:]
@@ -83,6 +81,9 @@ class CoordinateSet:
         """
         cosys = self.system
         converter = converters.get_converter(cosys, system)
-        fun = lambda coords: converter.convert_many(coords, **kw)
+        if self.multiconfig:
+            fun = lambda coords: converter.convert_many(coords, **kw)
+        else:
+            fun = lambda coords: converter.convert(coords, **kw)
         new_coords = self._mc_safe_apply(fun)
         return type(self)(new_coords, system)

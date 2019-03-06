@@ -13,7 +13,7 @@ def vec_dot_vanilla(vecs1, vecs2):
     return np.sum(vecs1*vecs2, axis=1)
 
 def vec_dot_matty(vecs1, vecs2):
-    return np.diag(np.dot(vecs1, vecs2.T))
+    return np.diag(np.matmul(vecs1, vecs2.T))
 
 def vec_dots(vecs1, vecs2, mode = None, arbitrary_cutoff = 1000000):
     """Computes the pair-wise dot product of two lists of vecs
@@ -126,7 +126,8 @@ def vec_angles(vectors1, vectors2):
     norms2  = vec_norms(vectors2)
     norm_prod = norms1*norms2
     cos_comps = dots/norm_prod
-    sin_comps = crosses/norm_prod
+    cross_norms = vec_norms(crosses)
+    sin_comps = cross_norms/norm_prod
 
     return (np.arctan2(sin_comps, cos_comps), crosses)
 

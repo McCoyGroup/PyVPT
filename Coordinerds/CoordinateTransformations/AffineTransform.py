@@ -1,7 +1,7 @@
 import numpy as np
 from .TransformationFunction import TransformationFunction
 from .TransformationUtilities import affine_matrix
-from .TransformationUtilities import merge_transformation_mats
+from .TransformationUtilities import merge_transformation_matrix
 
 ######################################################################################################
 ##
@@ -53,7 +53,7 @@ class AffineTransform(TransformationFunction):
 
         # I wanted to use type(self) but then I realized that'll fuck me over
         # if I want to merge like a ScalingTransform and a RotationTransform
-        return AffineTransform(merge_transformation_mats(transf, other))
+        return AffineTransform(merge_transformation_matrix(transf, other))
 
 
     def reverse(self):

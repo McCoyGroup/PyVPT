@@ -1,7 +1,7 @@
 from .CoordinateSystemConverter import CoordinateSystemConverter
 from .CommonCoordinateSystems import CartesianCoordinates3D, ZMatrixCoordinates
-from .Utilities import vec_norms, vec_angles, pts_dihedrals, vec_normalize, vec_crosses
-from .Utilities import affine_matrix, merge_transofrmation_matrix, rotation_matrix
+from ..CoordinateTransformations.TransformationUtilities import vec_norms, vec_angles, pts_dihedrals, vec_normalize, vec_crosses
+from ..CoordinateTransformations.TransformationUtilities import affine_matrix, merge_transformation_matrix, rotation_matrix
 import numpy as np
 # this import gets bound at load time, so unfortunately PyCharm can't know just yet
 # what properties its class will have and will try to claim that the files don't exist
@@ -87,10 +87,12 @@ class ZMatrixToCartesianConverter(CoordinateSystemConverter):
 
         crosses = vec_crosses(axes, np.repeat([0, 1, 0], coordnum)) + np.array([0, 0, 1])
 
-
-
+        raise NotImplementedError("Need to finish implementing this...")
 
 
     def convert(self, coords, **kw):
         """dipatches to convert_many but only pulls the first"""
         return self.convert_many(np.reshape(coords, (1,)+coords.shape), **kw)[0]
+
+
+__converters__ = [ ZMatrixToCartesianConverter() ]

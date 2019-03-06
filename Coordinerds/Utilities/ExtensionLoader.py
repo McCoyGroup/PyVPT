@@ -22,13 +22,14 @@ class ExtensionLoader(importlib.abc.SourceLoader):
 
     def get_filename(self, fullname):
         if not os.path.exists(fullname):
-            fullname = os.path.join(self._dir, fullname)
+            basename = os.path.splitext(fullname.split(".")[-1])[0]
+            fullname = os.path.join(self._dir, basename+".py")
         if os.path.isdir(fullname):
             fullname = os.path.join(fullname, "__init__.py")
         return fullname
 
     def get_spec(self, file, pkg = None):
-        base_name = os.path.basename(file)
+        base_name = os.path.splitext(os.path.basename(file))[0]
         package_origin = file
         if pkg is None:
             pkg = self._pkg
@@ -38,7 +39,7 @@ class ExtensionLoader(importlib.abc.SourceLoader):
         spec = importlib.util.spec_from_loader(
             package_name,
             self,
-            origin= package_origin
+            origin=package_origin
         )
         return spec
 
@@ -53,6 +54,8 @@ class ExtensionLoader(importlib.abc.SourceLoader):
         :rtype: module
         """
         spec = self.get_spec(file, pkg)
-        module = self.create_module(spec)
+        module = importlib.util.module_from_spec(spec)
+        if module is None:
+            module = importlib.util.module_from_spec(None)
         self.exec_module(module)
         return module

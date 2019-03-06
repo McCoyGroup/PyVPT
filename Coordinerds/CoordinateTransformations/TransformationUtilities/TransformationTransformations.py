@@ -1,6 +1,6 @@
 import numpy as np
 
-def merge_transformation_mats(transf, other):
+def merge_transformation_matrix(transf, other):
     """Merges two transformation matrices
 
     :param transf:
