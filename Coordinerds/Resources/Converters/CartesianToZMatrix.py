@@ -63,6 +63,11 @@ class CartesianToZMatrixConverter(CoordinateSystemConverter):
     def get_diheds(points, centers, seconds, thirds):
         return pts_dihedrals(centers, seconds, thirds, points)
 
+    # Need a way to vectorize this conversion i think...
+    # Imagine converting like 5000000 sets of coordinates...
+    # My sense is that the appropriate thing to do is to have this all be vectorized by default
+    # and in the single coordinates case just pull the first?
+    # Or maybe that logic should be in the CoordinateSystemConverters class...
     def convert(self, coords, ordering=None, use_rad=True, **kw):
         """The ordering should be specified like:
 
@@ -110,6 +115,9 @@ class CartesianToZMatrixConverter(CoordinateSystemConverter):
             coords[ol[3:, 2]],
             coords[ol[3:, 3]]
         )
+
+        # need to recast this all in array operations... there's no reason to be looping in
+        # python for something as simple as this
         final_coords = np.array(
             [
                 [om[ol[1, 1]], dists[0], 0,            0,         0, 0],

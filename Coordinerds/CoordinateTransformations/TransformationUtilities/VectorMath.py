@@ -49,6 +49,14 @@ def vec_norms(vecs):
 
 ################################################
 #
+#       vec_normalize
+#
+
+def vec_normalize(vecs):
+    return vecs/vec_norms(vecs)
+
+################################################
+#
 #       vec_crosses
 #
 
@@ -147,7 +155,7 @@ def pts_normals(pts1, pts2, pts3, normalize=True):
 
 ################################################
 #
-#       vec_dihedrals
+#       pts_dihedrals
 #
 
 def pts_dihedrals(pts1, pts2, pts3, pts4):
@@ -166,6 +174,26 @@ def pts_dihedrals(pts1, pts2, pts3, pts4):
     normals = pts_normals(pts2, pts1, pts3, normalize=False)
     off_plane_vecs = pts4-pts3
     return vec_angles(off_plane_vecs, normals)[0]
+
+
+################################################
+#
+#       mat_vec_muls
+
+def mat_vec_muls(mats, vecs):
+    """Pairwise multiplies mats and vecs
+
+    :param mats:
+    :type mats:
+    :param vecs:
+    :type vecs:
+    :return:
+    :rtype:
+    """
+
+    vecs_2 = np.reshape(vecs, vecs.shape + (1,))
+    vecs_2 = np.matmul(mats, vecs_2)
+    return np.reshape(vecs_2, vecs.shape)
 
 
 

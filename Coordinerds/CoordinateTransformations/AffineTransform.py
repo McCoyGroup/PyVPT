@@ -1,6 +1,7 @@
 import numpy as np
 from .TransformationFunction import TransformationFunction
-from .Utilities.TranslationMatrices import translation_matrix
+from .TransformationUtilities import affine_matrix
+from .TransformationUtilities import merge_transformation_mats
 
 ######################################################################################################
 ##
@@ -22,7 +23,7 @@ class AffineTransform(TransformationFunction):
         :type tmat: np.ndarray
         """
 
-        self.transf = self.compose_matrix(tmat, shift)
+        self.transf = affine_matrix(tmat, shift)
         super().__init__()
 
     @property
@@ -39,45 +40,31 @@ class AffineTransform(TransformationFunction):
             vec = None
         return vec
 
-    def compose_matrix(self, tmat, shift):
-        base_mat = np.array(tmat)
-        if shift is None or shift == [0., 0., 0.]:
-            mat = base_mat
-        else:
-            base_shift = np.append(np.array(shift), [1])
-            np.reshape(base_shift, (4, 1))
-            base_mat = np.append(
-                np.append(base_mat, np.zeros((1, 3)), axis=0),
-                base_shift.transpose(),
-                axis=1
-            )
-            mat = np.dot(base_mat, translation_matrix(shift))
-        return mat
-
     def merge(self, other):
         """
 
         :param other:
         :type other: np.ndarray or AffineTransform
         """
-        from .Utilities.TransformationTransformations import merge_transformation_mats
 
-        if type(other) is type(self):
+        if isinstance(type(other), AffineTransform):
             other = other.transf
         transf = self.transf
 
-        return type(self)(merge_transformation_mats(transf, other))
+        # I wanted to use type(self) but then I realized that'll fuck me over
+        # if I want to merge like a ScalingTransform and a RotationTransform
+        return AffineTransform(merge_transformation_mats(transf, other))
 
 
     def reverse(self):
-        """
+        """Inverts the matrix
 
         :return:
         :rtype:
         """
         
         inverse = np.linalg.inv(self.transf)
-        return type(self)(inverse)
+        return AffineTransform(inverse)
 
 
     def operate(self, coords):
@@ -106,3 +93,7 @@ class AffineTransform(TransformationFunction):
         adj_coord.reshape(coord_shape)
 
         return adj_coord
+
+    def __repr__(self):
+        ## we'll basically just leverage the ndarray repr:
+        return "{}({})".format(type(self), str(self.transf))

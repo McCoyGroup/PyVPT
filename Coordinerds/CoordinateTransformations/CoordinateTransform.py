@@ -1,4 +1,4 @@
-"""The coordinate transform class defines an architecture to transform coordinates
+"""The coordinate mats class defines an architecture to mats coordinates
 
 """
 import numpy as np

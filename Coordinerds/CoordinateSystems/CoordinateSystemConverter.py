@@ -1,6 +1,6 @@
 from collections import OrderedDict as odict
-import os, abc
-from ...Utilities.ExtensionLoader import ExtensionLoader
+import os, abc, numpy as np
+from ..Utilities.ExtensionLoader import ExtensionLoader
 
 ######################################################################################################
 ##
@@ -54,7 +54,6 @@ class CoordinateSystemConverters:
             type_pair = tuple(conv.types)
             self.converters[type_pair] = conv
 
-
     @classmethod
     def _preload_converters(self):
         for file in os.listdir(self.converters_dir):
@@ -102,6 +101,18 @@ class CoordinateSystemConverter(metaclass=abc.ABCMeta):
 
         """
         pass
+
+    def convert_many(self, coords_list, **kwargs):
+        """Converts many coordinates. Used in cases where a CoordinateSet has higher dimension
+        than its basis dimension. Should be overridden by a converted to provide efficient conversions
+        where necessary.
+
+        :param coords_list: many sets of coords
+        :type coords_list: np.ndarray
+        :param kwargs:
+        :type kwargs:
+        """
+        return np.array((self.convert(coords, **kwargs) for coords in coords_list))
 
     @abc.abstractmethod
     def convert(self, coords, **kwargs):
