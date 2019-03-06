@@ -23,9 +23,7 @@ class RotationTransform(AffineTransform):
         :type center: None or np.array
         """
 
-        from .TransformationUtilities.TransformationMatrices import rotation_matrix
-        from .TransformationUtilities.TranslationMatrices import translation_matrix
-        from .TransformationUtilities.TransformationTransformations import merge_transformation_mats
+        from .TransformationUtilities import rotation_matrix, translation_matrix, merge_transformation_mats
 
         rot_mat = rotation_matrix(theta)
         if center is not None:

@@ -1,5 +1,5 @@
 
-from .VectorMath import vec_normalize
+from .VectorOps import vec_normalize
 import math, numpy as np
 
 #######################################################################################################################
@@ -190,8 +190,6 @@ def affine_matrix(tmat, shift):
     if len(base_mat.shape) > 2:
         shifts = np.asarray(shift)
         if len(shifts.shape) == 1:
-            if shifts == [0., 0., 0.]:
-                return  base_mat # dump out here rather than flowing up and whatnot
             shifts = np.repeat(shifts, len(base_mat))
         ones = np.ones((len(base_mat), 1))
         shifts = np.concatenate((shifts, ones), axis=1)
@@ -201,14 +199,11 @@ def affine_matrix(tmat, shift):
         mat = np.concatenate((mat, shifts), axis=2)
 
     else:
-        if shift == [0., 0., 0.]:
-            mat = base_mat
-        else:
-            base_shift = np.append(np.array(shift), [1])
-            np.reshape(base_shift, (4, 1))
-            mat = np.append(
-                np.append(base_mat, np.zeros((1, 3)), axis=0),
-                base_shift.transpose(),
-                axis=1
-            )
+        base_shift = np.append(np.array(shift), [1])
+        np.reshape(base_shift, (4, 1))
+        mat = np.append(
+            np.append(base_mat, np.zeros((1, 3)), axis=0),
+            base_shift.transpose(),
+            axis=1
+        )
     return mat

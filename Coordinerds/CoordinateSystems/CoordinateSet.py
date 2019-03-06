@@ -1,6 +1,6 @@
 import numpy as np
-from ..CoordinateSystems.CoordinateSystemConverter import CoordinateSystemConverters as converters
-from ..CoordinateSystems.CommonCoordinateSystems import CartesianCoordinates3D
+from .CoordinateSystemConverter import CoordinateSystemConverters as converters
+from .CommonCoordinateSystems import CartesianCoordinates3D
 
 ######################################################################################################
 ##

@@ -1,28 +1,19 @@
 from unittest import *
-import numpy as np
+from .DataGenerator import DataGenerator
 from ..Coordinerds.CoordinateTransformations.TransformationUtilities import *
-
-class DataGenerator:
-
-    @staticmethod
-    def coords(n=50):
-        return np.random.rand(n, 3)
-
-    @staticmethod
-    def mats(n=1):
-        return np.random.rand(n, 3, 3)
-
-    @staticmethod
-    def vecs(n=1):
-        return np.random.rand(n, 3)
 
 class TestAffineMatrix(TestCase):
 
+    @property
+    def loaded(self):
+        return hasattr(self, "cases")
+
     def load(self, n=10):
-        self.cases = n
-        self.transforms = DataGenerator.mats(n)
-        self.shifts = DataGenerator.vecs(n)
-        self.mats = affine_matrix(self.transforms, self.shifts)
+        if not self.loaded:
+            self.cases = n
+            self.transforms = DataGenerator.mats(n)
+            self.shifts = DataGenerator.vecs(n)
+            self.mats = affine_matrix(self.transforms, self.shifts)
 
     def test_mat_dim(self):
         self.load()
@@ -31,8 +22,14 @@ class TestAffineMatrix(TestCase):
     def test_mat_mul(self):
         self.load()
         vecs = DataGenerator.vecs(self.cases)
-        fuck_this = np.ones((self.cases, 1))
-        vecs = np.concatenate((vecs, fuck_this), axis=1)
-        vec_prod = mat_vec_muls(self.mats, vecs)
-        vec_prod2 = np.array([ a @ b for a, b in zip(self.mats, vecs)])
+        vec_prod = affine_multiply(self.mats, vecs)
+        vec_prod2 = np.array([ a @ b for a, b in zip(self.mats, one_pad_vecs(vecs))])[:, :3]
         self.assertAlmostEqual(np.sum(vec_prod-vec_prod2), 0.)
+
+    def test_affine_mats(self):
+        self.load()
+        vecs = DataGenerator.vecs(self.cases)
+        vec_prod = affine_multiply(self.mats, vecs)
+        affine_inv = np.asarray([ np.linalg.inv(m) for m in self.mats ])
+        vecs2 = affine_multiply(affine_inv, vec_prod)
+        self.assertAlmostEqual(np.sum(vecs-vecs2), 0.)

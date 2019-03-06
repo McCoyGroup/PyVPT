@@ -175,7 +175,6 @@ def pts_dihedrals(pts1, pts2, pts3, pts4):
     off_plane_vecs = pts4-pts3
     return vec_angles(off_plane_vecs, normals)[0]
 
-
 ################################################
 #
 #       mat_vec_muls
@@ -195,7 +194,36 @@ def mat_vec_muls(mats, vecs):
     vecs_2 = np.matmul(mats, vecs_2)
     return np.reshape(vecs_2, vecs.shape)
 
+################################################
+#
+#       one_pad_vecs
+def one_pad_vecs(vecs):
+    ones = np.ones((len(vecs), 1))
+    vecs = np.concatenate((vecs, ones), axis=1)
+    return vecs
 
+################################################
+#
+#       affine_multiply
+
+def affine_multiply(mats, vecs):
+    """Multiplies affine mats and vecs
+
+    :param mats:
+    :type mats:
+    :param vecs:
+    :type vecs:
+    :return:
+    :rtype:
+    """
+
+    vec_shape = vecs.shape
+    if vec_shape[-1] != 4:
+        vecs = one_pad_vecs(vecs)
+    res = mat_vec_muls(mats, vecs)
+    if vec_shape[-1] != 4:
+        res = res[:, :3]
+    return res
 
 
 

@@ -5,4 +5,4 @@
 from .EulerSystem import *
 from .TransformationMatrices import *
 from .TransformationTransformations import *
-from .VectorMath import *
+from .VectorOps import *
