@@ -20,7 +20,7 @@ Every type of tests should be its own module and should be tagged as either a Fa
 
 if __name__=="__main__":
     import os, sys
-    tests_dir = os.path.dirname(__file__)
+    tests_dir = os.path.dirname(os.path.abspath(__file__))
     base_dir = os.path.dirname(os.path.dirname(tests_dir))
     sys.path.insert(0, base_dir)
 
@@ -46,23 +46,23 @@ if __name__=="__main__":
 
     debug_results= None
     if debug:
-        print("\n"+"-"*70, file=sys.stderr)
-        print("-"*70, file=sys.stderr)
-        print("Running Debug Tests:"+"\n", file=sys.stderr)
+        print("\n"+"-"*70, file=log_stream)
+        print("-"*70, file=log_stream)
+        print("Running Debug Tests:"+"\n", file=log_stream)
         debug_results  = runner.run(DebugTests)
 
     validate_results= None
     if validate:
-        print("\n"+"-"*70, file=sys.stderr)
-        print("-"*70, file=sys.stderr)
-        print("Running Validation Tests:"+"\n", file=sys.stderr)
+        print("\n"+"-"*70, file=log_stream)
+        print("-"*70, file=log_stream)
+        print("Running Validation Tests:"+"\n", file=log_stream)
         validate_results  = runner.run(ValidationTests)
 
     timing_results= None
     if timing:
-        print("\n"+"-"*70, file=sys.stderr)
-        print("-"*70, file=sys.stderr)
-        print("Running Timing Tests:"+"\n", file=sys.stderr)
+        print("\n"+"-"*70, file=log_stream)
+        print("-"*70, file=log_stream)
+        print("Running Timing Tests:"+"\n", file=log_stream)
         timing_results  = runner.run(TimingTests)
 
     debug_status = (debug_results is None) or debug_results.wasSuccessful()
