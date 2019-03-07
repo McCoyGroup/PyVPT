@@ -1,20 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b76b76cb-ce7f-4344-acde-240669f1c9ad" name="Default Changelist" comment="">
+    <list default="true" id="b76b76cb-ce7f-4344-acde-240669f1c9ad" name="Default Changelist" comment="Updated test framework / improved conversions">
+      <change afterPath="$PROJECT_DIR$/Tests/TestUtils.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coordinerds/CoordinateSystems/CoordinateSet.py" beforeDir="false" afterPath="$PROJECT_DIR$/Coordinerds/CoordinateSystems/CoordinateSet.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coordinerds/CoordinateSystems/CoordinateSystemConverter.py" beforeDir="false" afterPath="$PROJECT_DIR$/Coordinerds/CoordinateSystems/CoordinateSystemConverter.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coordinerds/CoordinateSystems/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Coordinerds/CoordinateSystems/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coordinerds/CoordinateTransformations/AffineTransform.py" beforeDir="false" afterPath="$PROJECT_DIR$/Coordinerds/CoordinateTransformations/AffineTransform.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coordinerds/CoordinateTransformations/RotationTransform.py" beforeDir="false" afterPath="$PROJECT_DIR$/Coordinerds/CoordinateTransformations/RotationTransform.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coordinerds/CoordinateTransformations/TransformationUtilities/TransformationTransformations.py" beforeDir="false" afterPath="$PROJECT_DIR$/Coordinerds/CoordinateTransformations/TransformationUtilities/TransformationTransformations.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coordinerds/CoordinateTransformations/TransformationUtilities/TransformationMatrices.py" beforeDir="false" afterPath="$PROJECT_DIR$/Coordinerds/CoordinateTransformations/TransformationUtilities/TransformationMatrices.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Coordinerds/CoordinateTransformations/TransformationUtilities/VectorOps.py" beforeDir="false" afterPath="$PROJECT_DIR$/Coordinerds/CoordinateTransformations/TransformationUtilities/VectorOps.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Coordinerds/Resources/Converters/CartesianToZMatrix.py" beforeDir="false" afterPath="$PROJECT_DIR$/Coordinerds/Resources/Converters/CartesianToZMatrix.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Coordinerds/Resources/Converters/ZMatrixToCartesian.py" beforeDir="false" afterPath="$PROJECT_DIR$/Coordinerds/Resources/Converters/ZMatrixToCartesian.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coordinerds/Utilities/ExtensionLoader.py" beforeDir="false" afterPath="$PROJECT_DIR$/Coordinerds/Utilities/ExtensionLoader.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tests/ConverterTests.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/ConverterTests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/DataGenerator.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/DataGenerator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/CoordinateTests.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/CoordinateTests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/DataGenerator.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tests/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/tests.py" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -70,29 +67,31 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="dummy" value="35" />
-          <entry key="py" value="20604" />
-          <entry key="txt" value="50" />
+          <entry key="dummy" value="53" />
+          <entry key="py" value="28067" />
+          <entry key="txt" value="130" />
           <entry key="wl" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Mathematica" value="9" />
-          <entry key="PLAIN_TEXT" value="85" />
-          <entry key="Python" value="20604" />
+          <entry key="PLAIN_TEXT" value="183" />
+          <entry key="Python" value="28067" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="60" />
+          <entry key="py" value="67" />
+          <entry key="sh" value="1" />
           <entry key="wl" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Mathematica" value="1" />
-          <entry key="Python" value="59" />
+          <entry key="PLAIN_TEXT" value="1" />
+          <entry key="Python" value="66" />
           <entry key="Scratch" value="1" />
         </counts>
       </usages-collector>
@@ -100,16 +99,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Coordinerds/Resources/Converters/CartesianToZMatrix.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Tests/tests.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="72" column="77" selection-start-line="72" selection-start-column="77" selection-end-line="72" selection-end-column="77" />
-              <folding>
-                <element signature="e#0#64#0" expanded="true" />
-                <marker date="1551865819046" expanded="true" signature="498:503" ph="..." />
-                <marker date="1551865819046" expanded="true" signature="2594:3129" ph="..." />
-              </folding>
+            <state relative-caret-position="217">
+              <caret line="36" column="4" lean-forward="true" selection-start-line="36" selection-start-column="4" selection-end-line="36" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -117,20 +111,70 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Tests/ConverterTests.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+            <state relative-caret-position="150">
+              <caret line="29" column="60" lean-forward="true" selection-start-line="29" selection-start-column="60" selection-end-line="29" selection-end-column="60" />
               <folding>
-                <element signature="e#0#22#0" expanded="true" />
+                <element signature="e#1#25#0" expanded="true" />
+                <marker date="1551950443726" expanded="true" signature="147:332" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Tests/DataGenerator.py">
+        <entry file="file://$PROJECT_DIR$/Tests/TestUtils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="17" lean-forward="true" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+            <state relative-caret-position="235">
+              <caret line="95" column="50" lean-forward="true" selection-start-line="95" selection-start-column="50" selection-end-line="95" selection-end-column="50" />
+              <folding>
+                <marker date="1551933082243" expanded="true" signature="501:506" ph="..." />
+                <marker date="1551933082243" expanded="true" signature="3608:3609" ph="..." />
+                <marker date="1551933082243" expanded="true" signature="3685:3728" ph="..." />
+                <marker date="1551933082243" expanded="true" signature="3842:3847" ph="..." />
+                <marker date="1551933082243" expanded="true" signature="3879:3888" ph="..." />
+                <marker date="1551933082243" expanded="true" signature="4014:4054" ph="..." />
+                <marker date="1551933082243" expanded="true" signature="4350:4355" ph="..." />
+                <marker date="1551933082243" expanded="true" signature="4952:5004" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Coordinerds/Resources/Converters/ZMatrixToCartesian.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="334">
+              <caret line="52" column="12" selection-start-line="52" selection-start-column="12" selection-end-line="52" selection-end-column="12" />
+              <folding>
+                <element signature="e#0#64#0" expanded="true" />
+                <marker date="1551950559810" expanded="true" signature="953:1749" ph="..." />
+                <marker date="1551950559810" expanded="true" signature="1824:2412" ph="..." />
+                <marker date="1551950559810" expanded="true" signature="2491:2500" ph="..." />
+                <marker date="1551950559810" expanded="true" signature="5441:5446" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Coordinerds/CoordinateTransformations/TransformationUtilities/TransformationMatrices.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="131">
+              <caret line="42" column="42" lean-forward="true" selection-start-line="42" selection-start-column="42" selection-end-line="42" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Coordinerds/Resources/Converters/CartesianToZMatrix.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="420">
+              <caret line="115" column="21" lean-forward="true" selection-start-line="115" selection-start-column="21" selection-end-line="115" selection-end-column="21" />
+              <folding>
+                <element signature="e#0#64#0" expanded="true" />
+                <marker date="1551924033197" expanded="true" signature="498:503" ph="..." />
+                <marker date="1551924033197" expanded="true" signature="2594:3129" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -138,12 +182,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Coordinerds/CoordinateTransformations/TransformationUtilities/VectorOps.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="262">
-              <caret line="128" column="36" lean-forward="true" selection-start-line="128" selection-start-column="36" selection-end-line="128" selection-end-column="36" />
+            <state relative-caret-position="153">
+              <caret line="210" column="19" selection-start-line="210" selection-start-column="4" selection-end-line="210" selection-end-column="19" />
               <folding>
-                <marker date="1551862443022" expanded="true" signature="329:330" ph="..." />
-                <marker date="1551862443022" expanded="true" signature="2063:2064" ph="..." />
-                <marker date="1551862443022" expanded="true" signature="5077:5178" ph="..." />
+                <marker date="1551924569758" expanded="true" signature="329:330" ph="..." />
+                <marker date="1551924569758" expanded="true" signature="2109:2110" ph="..." />
+                <marker date="1551924569758" expanded="true" signature="5123:5224" ph="..." />
               </folding>
             </state>
           </provider>
@@ -166,6 +210,7 @@
       <find>Event</find>
       <find>translate_event</find>
       <find>operator</find>
+      <find>SlowTest</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -179,8 +224,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/CoordinateTransformations/__init__.py" />
-        <option value="$PROJECT_DIR$/CoordinateTransformations/AffineTransform.py" />
         <option value="$PROJECT_DIR$/CoordinateTransformations/ScalingTransform.py" />
         <option value="$PROJECT_DIR$/CoordinateTransformations/CoordinateTransform.py" />
         <option value="$PROJECT_DIR$/CoordinateTransformations/RotationTransform.py" />
@@ -211,25 +254,27 @@
         <option value="$PROJECT_DIR$/Coordinerds/CoordinateTransformations/TransformationUtilities/__init__.py" />
         <option value="$PROJECT_DIR$/__init__.py" />
         <option value="$PROJECT_DIR$/tests.py" />
-        <option value="$PROJECT_DIR$/Coordinerds/CoordinateTransformations/TransformationUtilities/TransformationMatrices.py" />
         <option value="$PROJECT_DIR$/Coordinerds/CoordinateTransformations/TransformationUtilities/VectorMath.py" />
         <option value="$PROJECT_DIR$/Coordinerds/CoordinateTransformations/RotationTransform.py" />
         <option value="$PROJECT_DIR$/Coordinerds/__init__.py" />
-        <option value="$PROJECT_DIR$/Tests/CoordinateTests.py" />
-        <option value="$PROJECT_DIR$/Tests/__init__.py" />
-        <option value="$PROJECT_DIR$/Tests/tests.py" />
         <option value="$PROJECT_DIR$/Coordinerds/Utilities/ExtensionLoader.py" />
         <option value="$PROJECT_DIR$/Coordinerds/CoordinateSystems/__init__.py" />
         <option value="$PROJECT_DIR$/Coordinerds/CoordinateTransformations/TransformationUtilities/TransformationTransformations.py" />
         <option value="$PROJECT_DIR$/Coordinerds/CoordinateSystems/CoordinateSystemConverter.py" />
-        <option value="$PROJECT_DIR$/Coordinerds/Resources/Converters/ZMatrixToCartesian.py" />
         <option value="$PROJECT_DIR$/Coordinerds/MiscUtils.py" />
         <option value="$PROJECT_DIR$/Coordinerds/Utilities/MiscUtils.py" />
         <option value="$PROJECT_DIR$/Coordinerds/CoordinateSystems/CoordinateSet.py" />
-        <option value="$PROJECT_DIR$/Coordinerds/CoordinateTransformations/TransformationUtilities/VectorOps.py" />
+        <option value="$PROJECT_DIR$/Tests/TimingTests.py" />
         <option value="$PROJECT_DIR$/Tests/DataGenerator.py" />
-        <option value="$PROJECT_DIR$/Tests/ConverterTests.py" />
+        <option value="$PROJECT_DIR$/Tests/CoordinateTests.py" />
         <option value="$PROJECT_DIR$/Coordinerds/Resources/Converters/CartesianToZMatrix.py" />
+        <option value="$PROJECT_DIR$/Tests/__init__.py" />
+        <option value="$PROJECT_DIR$/Coordinerds/CoordinateTransformations/TransformationUtilities/VectorOps.py" />
+        <option value="$PROJECT_DIR$/Tests/TestUtils.py" />
+        <option value="$PROJECT_DIR$/Tests/ConverterTests.py" />
+        <option value="$PROJECT_DIR$/Tests/tests.py" />
+        <option value="$PROJECT_DIR$/Coordinerds/CoordinateTransformations/TransformationUtilities/TransformationMatrices.py" />
+        <option value="$PROJECT_DIR$/Coordinerds/Resources/Converters/ZMatrixToCartesian.py" />
       </list>
     </option>
   </component>
@@ -240,8 +285,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="94" />
-    <option name="y" value="23" />
+    <option name="x" value="154" />
+    <option name="y" value="27" />
     <option name="width" value="1161" />
     <option name="height" value="877" />
   </component>
@@ -257,56 +302,6 @@
             <path>
               <item name="PyVPT" type="b2602c69:ProjectViewProjectNode" />
               <item name="PyVPT" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PyVPT" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PyVPT" type="462c0819:PsiDirectoryNode" />
-              <item name="Coordinerds" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PyVPT" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PyVPT" type="462c0819:PsiDirectoryNode" />
-              <item name="Coordinerds" type="462c0819:PsiDirectoryNode" />
-              <item name="CoordinateSystems" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PyVPT" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PyVPT" type="462c0819:PsiDirectoryNode" />
-              <item name="Coordinerds" type="462c0819:PsiDirectoryNode" />
-              <item name="CoordinateTransformations" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PyVPT" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PyVPT" type="462c0819:PsiDirectoryNode" />
-              <item name="Coordinerds" type="462c0819:PsiDirectoryNode" />
-              <item name="CoordinateTransformations" type="462c0819:PsiDirectoryNode" />
-              <item name="TransformationUtilities" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PyVPT" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PyVPT" type="462c0819:PsiDirectoryNode" />
-              <item name="Coordinerds" type="462c0819:PsiDirectoryNode" />
-              <item name="Resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PyVPT" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PyVPT" type="462c0819:PsiDirectoryNode" />
-              <item name="Coordinerds" type="462c0819:PsiDirectoryNode" />
-              <item name="Resources" type="462c0819:PsiDirectoryNode" />
-              <item name="Converters" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PyVPT" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PyVPT" type="462c0819:PsiDirectoryNode" />
-              <item name="Coordinerds" type="462c0819:PsiDirectoryNode" />
-              <item name="Resources" type="462c0819:PsiDirectoryNode" />
-              <item name="Mathematica" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PyVPT" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PyVPT" type="462c0819:PsiDirectoryNode" />
-              <item name="Coordinerds" type="462c0819:PsiDirectoryNode" />
-              <item name="Utilities" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="PyVPT" type="b2602c69:ProjectViewProjectNode" />
@@ -462,7 +457,14 @@
       <option name="project" value="LOCAL" />
       <updated>1551839288826</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Tests passing!">
+      <created>1551865861117</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1551865861117</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -480,16 +482,16 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="94" y="23" width="1161" height="877" extended-state="0" />
+    <frame x="154" y="27" width="1161" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24843611" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18498659" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32953367" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.33503184" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.38598725" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -497,7 +499,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32953367" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="10" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.3299363" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -505,13 +507,13 @@
       <window_info anchor="right" id="Maven Projects" order="4" weight="0.3297587" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2110858" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18508655" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32953367" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.4041451" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.35751295" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -527,13 +529,18 @@
       <window_info anchor="right" id="Maven Projects" order="4" weight="0.3297587" />
     </layout-to-restore>
   </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.sh" />
+  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added tests / vectorized math" />
     <MESSAGE value="Ran tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ran tests" />
+    <MESSAGE value="Tests passing!" />
+    <MESSAGE value="Updated test framework / improved conversions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated test framework / improved conversions" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -677,18 +684,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/CoordinateTests.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" selection-end-column="40" />
-          <folding>
-            <marker date="1551838839310" expanded="true" signature="213:257" ph="..." />
-            <marker date="1551838839310" expanded="true" signature="278:287" ph="..." />
-            <marker date="1551838839310" expanded="true" signature="502:1249" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Coordinerds/CoordinateSystems/CommonCoordinateSystems.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="438">
@@ -710,16 +705,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="3" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="45" lean-forward="true" selection-start-line="2" selection-start-column="45" selection-end-line="2" selection-end-column="45" />
-          <folding>
-            <element signature="e#1#42#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -747,20 +732,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Coordinerds/Resources/Converters/ZMatrixToCartesian.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding>
-            <element signature="e#2#66#0" expanded="true" />
-            <marker date="1551842608232" expanded="true" signature="938:1581" ph="..." />
-            <marker date="1551842608232" expanded="true" signature="1656:1906" ph="..." />
-            <marker date="1551842608232" expanded="true" signature="1985:1994" ph="..." />
-            <marker date="1551842608232" expanded="true" signature="3181:3186" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -822,13 +793,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Coordinerds/CoordinateTransformations/TransformationUtilities/TransformationMatrices.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1608">
-          <caret line="198" column="32" selection-start-line="198" selection-start-column="32" selection-end-line="198" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Coordinerds/CoordinateTransformations/TransformationUtilities/TransformationTransformations.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -846,13 +810,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/tests.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="30" lean-forward="true" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Coordinerds/CoordinateSystems/CoordinateSet.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="265">
@@ -864,43 +821,121 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Coordinerds/CoordinateTransformations/TransformationUtilities/VectorOps.py">
+    <entry file="file://$PROJECT_DIR$/Tests/TestUtils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="128" column="36" lean-forward="true" selection-start-line="128" selection-start-column="36" selection-end-line="128" selection-end-column="36" />
+        <state relative-caret-position="480">
+          <caret line="32" column="7" lean-forward="true" selection-start-line="32" selection-start-column="7" selection-end-line="32" selection-end-column="7" />
           <folding>
-            <marker date="1551862443022" expanded="true" signature="329:330" ph="..." />
-            <marker date="1551862443022" expanded="true" signature="2063:2064" ph="..." />
-            <marker date="1551862443022" expanded="true" signature="5077:5178" ph="..." />
+            <marker date="1551933082243" expanded="true" signature="501:506" ph="..." />
+            <marker date="1551933082243" expanded="true" signature="3608:3609" ph="..." />
+            <marker date="1551933082243" expanded="true" signature="3685:3728" ph="..." />
+            <marker date="1551933082243" expanded="true" signature="3842:3847" ph="..." />
+            <marker date="1551933082243" expanded="true" signature="3879:3888" ph="..." />
+            <marker date="1551933082243" expanded="true" signature="4014:4054" ph="..." />
+            <marker date="1551933082243" expanded="true" signature="4350:4355" ph="..." />
+            <marker date="1551933082243" expanded="true" signature="4952:5004" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/DataGenerator.py">
+    <entry file="file://$PROJECT_DIR$/pre-commit-hook.sh">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/CoordinateTests.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="17" lean-forward="true" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        <state relative-caret-position="480">
+          <caret line="32" column="72" lean-forward="true" selection-start-line="32" selection-start-column="72" selection-end-line="32" selection-end-column="72" />
+          <folding>
+            <element signature="e#1#25#0" expanded="true" />
+            <marker date="1551922726545" expanded="true" signature="175:492" ph="..." />
+            <marker date="1551922726545" expanded="true" signature="462:467" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/ConverterTests.py">
+    <entry file="file://$PROJECT_DIR$/Tests/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-          <folding>
-            <element signature="e#0#22#0" expanded="true" />
-          </folding>
+          <caret line="3" column="61" lean-forward="true" selection-start-line="3" selection-start-column="61" selection-end-line="3" selection-end-column="61" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Coordinerds/Resources/Converters/CartesianToZMatrix.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="72" column="77" selection-start-line="72" selection-start-column="77" selection-end-line="72" selection-end-column="77" />
+        <state relative-caret-position="420">
+          <caret line="115" column="21" lean-forward="true" selection-start-line="115" selection-start-column="21" selection-end-line="115" selection-end-column="21" />
           <folding>
             <element signature="e#0#64#0" expanded="true" />
-            <marker date="1551865819046" expanded="true" signature="498:503" ph="..." />
-            <marker date="1551865819046" expanded="true" signature="2594:3129" ph="..." />
+            <marker date="1551924033197" expanded="true" signature="498:503" ph="..." />
+            <marker date="1551924033197" expanded="true" signature="2594:3129" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Coordinerds/CoordinateTransformations/TransformationUtilities/VectorOps.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="210" column="19" selection-start-line="210" selection-start-column="4" selection-end-line="210" selection-end-column="19" />
+          <folding>
+            <marker date="1551924569758" expanded="true" signature="329:330" ph="..." />
+            <marker date="1551924569758" expanded="true" signature="2109:2110" ph="..." />
+            <marker date="1551924569758" expanded="true" signature="5123:5224" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/ConverterTests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="29" column="60" lean-forward="true" selection-start-line="29" selection-start-column="60" selection-end-line="29" selection-end-column="60" />
+          <folding>
+            <element signature="e#1#25#0" expanded="true" />
+            <marker date="1551950443726" expanded="true" signature="147:332" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/TestUtils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="95" column="50" lean-forward="true" selection-start-line="95" selection-start-column="50" selection-end-line="95" selection-end-column="50" />
+          <folding>
+            <marker date="1551933082243" expanded="true" signature="501:506" ph="..." />
+            <marker date="1551933082243" expanded="true" signature="3608:3609" ph="..." />
+            <marker date="1551933082243" expanded="true" signature="3685:3728" ph="..." />
+            <marker date="1551933082243" expanded="true" signature="3842:3847" ph="..." />
+            <marker date="1551933082243" expanded="true" signature="3879:3888" ph="..." />
+            <marker date="1551933082243" expanded="true" signature="4014:4054" ph="..." />
+            <marker date="1551933082243" expanded="true" signature="4350:4355" ph="..." />
+            <marker date="1551933082243" expanded="true" signature="4952:5004" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="36" column="4" lean-forward="true" selection-start-line="36" selection-start-column="4" selection-end-line="36" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Coordinerds/CoordinateTransformations/TransformationUtilities/TransformationMatrices.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="42" column="42" lean-forward="true" selection-start-line="42" selection-start-column="42" selection-end-line="42" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Coordinerds/Resources/Converters/ZMatrixToCartesian.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="334">
+          <caret line="52" column="12" selection-start-line="52" selection-start-column="12" selection-end-line="52" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#64#0" expanded="true" />
+            <marker date="1551950559810" expanded="true" signature="953:1749" ph="..." />
+            <marker date="1551950559810" expanded="true" signature="1824:2412" ph="..." />
+            <marker date="1551950559810" expanded="true" signature="2491:2500" ph="..." />
+            <marker date="1551950559810" expanded="true" signature="5441:5446" ph="..." />
           </folding>
         </state>
       </provider>

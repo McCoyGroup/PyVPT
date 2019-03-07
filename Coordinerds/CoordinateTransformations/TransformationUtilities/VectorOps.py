@@ -53,7 +53,8 @@ def vec_norms(vecs):
 #
 
 def vec_normalize(vecs):
-    return vecs/vec_norms(vecs)
+    norms = np.reshape(vec_norms(vecs), (len(vecs), 1))
+    return vecs/norms
 
 ################################################
 #

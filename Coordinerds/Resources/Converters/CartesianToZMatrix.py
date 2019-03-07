@@ -124,7 +124,7 @@ class CartesianToZMatrixConverter(CoordinateSystemConverter):
 
         # we define an order map that we'll index into to get the new indices for a
         # given coordinate
-        om = np.argsort(ol[:, 0]).astype(float)
+        om = 1+np.argsort(ol[:, 0]).astype(float)
 
         # need to check against the cases of like 1, 2, 3 atom molecules
         # annoying but not hard

@@ -44,8 +44,8 @@ def rotation_matrix_basic_vec(xyz, thetas):
 
     :param xyz: x, y, or z axis
     :type xyz: str
-    :param theta: counter clockwise angle in radians
-    :type theta: float
+    :param thetas: counter clockwise angle in radians
+    :type thetas: float
     """
 
     thetas = np.asarray(thetas)
@@ -103,12 +103,13 @@ def rotation_matrix_ER_vec(axes, thetas):
     thetas = np.asarray(thetas)
     if len(axes.shape) == 1:
         axes = axes/np.linalg.norm(axes)
-        axes = np.repeat(axes, len(thetas))
+        axes = np.broadcast_to(axes, (len(thetas), 3))
     else:
         axes = vec_normalize(axes)
 
     a = np.cos(thetas/2.0)
-    b, c, d = -axes * np.sin(thetas / 2.0)
+    b, c, d = ( -axes * np.reshape(np.sin(thetas / 2.0), (len(thetas), 1)) ).T
+    # raise Exception(axes)
     aa, bb, cc, dd = a * a, b * b, c * c, d * d
     bc, ad, ac, ab, bd, cd = b * c, a * d, a * c, a * b, b * d, c * d
     return np.array([
