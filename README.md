@@ -1,32 +1,20 @@
 # PyVPT
 
-The Python Vibrational Perturbation Theory package (PyVPT) is intended\
- to make it easy to do vibrational perturbation theory in internal\
- coordinates in python.
+The Python Vibrational Perturbation Theory package (PyVPT) is intended to make it easy to do vibrational perturbation theory in internal coordinates in python.
  
 ## Included Components
  
  - **Coordinerds**
-    The Coordinerds package is essentially a standalone package for\
-     handling many types of coordinate transformations in python.\
-     It includes a way to represent coordinates in a given basis, an\
-     extensible conversion system, and some support for providing fast\
-     coordinate transformations
+    The Coordinerds package is essentially a standalone package for handling many types of coordinate transformations in python. It includes a way to represent coordinates in a given basis, an extensible conversion system, and some support for providing fast coordinate transformations
      
  - **PerturbationTheory**
-    The PerturbationTheory package *will* be the main implementation\
-     of perturbtation theory in the package. It'll work with the\
-     coordinate work under development to provide a way to do all the\
-     expansions in internal coordinates.
+    The PerturbationTheory package *will* be the main implementation of perturbtation theory in the package. It'll work with the coordinate work under development to provide a way to do all the expansions in internal coordinates.
  
  - **Tests**
-    Some integration with the python unittest framework exists. More\
-     will come as the package gets more fleshed out. Connects to Travis.
+    Some integration with the python unittest framework exists. More will come as the package gets more fleshed out. Connects to Travis.
  
  - **TBD**
-    Some faculty for doing nice finite differencing, Taylor series\
-     expansions, etc. will be needed. Where exactly this will go is\
-     still TBD.
+    Some faculty for doing nice finite differencing, Taylor series expansions, etc. will be needed. Where exactly this will go is still TBD.
 
 ## Road Map
 
@@ -52,5 +40,9 @@ The Python Vibrational Perturbation Theory package (PyVPT) is intended\
  - [ ] Write efficient Gaussian Log File importer
  - [ ] Get potential expansions with Gaussian potential / force consts
  - [ ] Implement proper exprs for perturbation expansions
- 
+
+
+## Suggestions / Issues / Warnings
+
+This is really not intended for outside use, but if there are features that should be included they can be suggested on the repo [issues page](https://github.com/McCoyGroup/PyVPT/issues)
 
