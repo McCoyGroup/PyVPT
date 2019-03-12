@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b76b76cb-ce7f-4344-acde-240669f1c9ad" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.travis.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tests/run_tests.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tests/ConverterTests.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/ConverterTests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/TestUtils.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/TestUtils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/run_tests.sh" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/run_tests.sh" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -68,37 +63,39 @@
         <counts>
           <entry key="dummy" value="53" />
           <entry key="md" value="2326" />
-          <entry key="py" value="28343" />
-          <entry key="sh" value="16" />
-          <entry key="txt" value="130" />
+          <entry key="py" value="28349" />
+          <entry key="sh" value="39" />
+          <entry key="txt" value="146" />
           <entry key="wl" value="9" />
           <entry key="yml" value="24" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
+          <entry key="Bash" value="23" />
           <entry key="Markdown" value="2326" />
           <entry key="Mathematica" value="9" />
-          <entry key="PLAIN_TEXT" value="199" />
-          <entry key="Python" value="28343" />
+          <entry key="PLAIN_TEXT" value="215" />
+          <entry key="Python" value="28349" />
           <entry key="YAML" value="24" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="md" value="2" />
-          <entry key="py" value="69" />
-          <entry key="sh" value="2" />
-          <entry key="txt" value="1" />
+          <entry key="py" value="71" />
+          <entry key="sh" value="3" />
+          <entry key="txt" value="2" />
           <entry key="wl" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
+          <entry key="Bash" value="1" />
           <entry key="Markdown" value="1" />
           <entry key="Mathematica" value="1" />
-          <entry key="PLAIN_TEXT" value="4" />
-          <entry key="Python" value="68" />
+          <entry key="PLAIN_TEXT" value="5" />
+          <entry key="Python" value="70" />
           <entry key="Scratch" value="1" />
         </counts>
       </usages-collector>
@@ -106,11 +103,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Tests/run_tests.sh">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="30">
-              <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+              <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -118,8 +115,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Tests/ConverterTests.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="9" column="42" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="42" />
+            <state relative-caret-position="379">
+              <caret line="36" column="35" lean-forward="true" selection-start-line="36" selection-start-column="35" selection-end-line="36" selection-end-column="35" />
               <folding>
                 <element signature="e#1#25#0" expanded="true" />
               </folding>
@@ -130,7 +127,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Tests/TestUtils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1530">
+            <state relative-caret-position="529">
               <caret line="102" column="51" selection-start-line="102" selection-start-column="51" selection-end-line="102" selection-end-column="51" />
               <folding>
                 <marker date="1551956000178" expanded="true" signature="501:506" ph="..." />
@@ -142,11 +139,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Coordinerds/Utilities/ExtensionLoader.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="25" column="50" selection-start-line="25" selection-start-column="50" selection-end-line="25" selection-end-column="50" />
+            <state relative-caret-position="360">
+              <caret line="24" column="27" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="27" />
               <folding>
                 <marker date="1551841589335" expanded="true" signature="1479:1485" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Tests/CoordinateTests.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="392">
+              <caret line="28" column="19" lean-forward="true" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -167,12 +173,12 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="585">
-                <caret line="39" column="5" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
+              <first_editor relative-caret-position="300">
+                <caret line="20" column="1" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
               </first_editor>
               <second_editor>
                 <markdownNavigatorState />
@@ -182,19 +188,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.travis.yml">
+        <entry file="file://$PROJECT_DIR$/Tests/test_results.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="20" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Coordinerds/CoordinateTransformations/TransformationUtilities/TransformationMatrices.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="615">
-              <caret line="42" column="42" selection-start-line="42" selection-start-column="42" selection-end-line="42" selection-end-column="42" />
+            <state relative-caret-position="330">
+              <caret line="22" column="22" lean-forward="true" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -301,14 +298,14 @@
         <option value="$PROJECT_DIR$/Coordinerds/CoordinateTransformations/TransformationUtilities/VectorOps.py" />
         <option value="$PROJECT_DIR$/Coordinerds/CoordinateTransformations/TransformationUtilities/TransformationMatrices.py" />
         <option value="$PROJECT_DIR$/Coordinerds/Resources/Converters/ZMatrixToCartesian.py" />
-        <option value="$PROJECT_DIR$/Tests/run_tests.sh" />
         <option value="$PROJECT_DIR$/Tests/TestUtils.py" />
         <option value="$PROJECT_DIR$/Tests/tests.py" />
-        <option value="$PROJECT_DIR$/Tests/ConverterTests.py" />
         <option value="$PROJECT_DIR$/.travis.yml.py" />
         <option value="$PROJECT_DIR$/.travis.yml" />
         <option value="$PROJECT_DIR$/progress_log.md" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/Tests/ConverterTests.py" />
+        <option value="$PROJECT_DIR$/Tests/run_tests.sh" />
       </list>
     </option>
   </component>
@@ -394,7 +391,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Timing Tests">
+  <component name="RunManager" selected="Python.Validation Tests">
     <configuration name="ExtensionLoader" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="PyVPT" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -575,7 +572,14 @@
       <option name="project" value="LOCAL" />
       <updated>1551950869626</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Added Road Map">
+      <created>1552431324076</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1552431324076</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -602,14 +606,14 @@
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32953367" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49956933" weight="0.3858561" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4986945" visible="true" weight="0.38539553" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32953367" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32953367" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50043064" side_tool="true" weight="0.3858561" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50130546" side_tool="true" weight="0.38539553" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.3299363" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -629,7 +633,8 @@
     <MESSAGE value="Ran tests" />
     <MESSAGE value="Tests passing!" />
     <MESSAGE value="Updated test framework / improved conversions" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated test framework / improved conversions" />
+    <MESSAGE value="Added Road Map" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Road Map" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -829,13 +834,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pre-commit-hook.sh" />
-    <entry file="file://$PROJECT_DIR$/Tests/CoordinateTests.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" column="72" lean-forward="true" selection-start-line="32" selection-start-column="72" selection-end-line="32" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Tests/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -847,50 +845,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="930">
           <caret line="62" column="24" selection-start-line="62" selection-start-column="24" selection-end-line="62" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/test_results.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/run_tests.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/ConverterTests.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="9" column="42" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="42" />
-          <folding>
-            <element signature="e#1#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/TestUtils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1530">
-          <caret line="102" column="51" selection-start-line="102" selection-start-column="51" selection-end-line="102" selection-end-column="51" />
-          <folding>
-            <marker date="1551956000178" expanded="true" signature="501:506" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Coordinerds/Utilities/ExtensionLoader.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="50" selection-start-line="25" selection-start-column="50" selection-end-line="25" selection-end-column="50" />
-          <folding>
-            <marker date="1551841589335" expanded="true" signature="1479:1485" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -935,6 +889,25 @@
     <entry file="file://$PROJECT_DIR$/progress_log.md">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="300">
+            <caret line="20" column="1" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
+          </first_editor>
+          <second_editor>
+            <markdownNavigatorState />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/test_results.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="22" lean-forward="true" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Coordinerds/Resources/Converters/ZMatrixToCartesian.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="729">
@@ -949,15 +922,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="585">
-            <caret line="39" column="5" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
-          </first_editor>
-          <second_editor>
-            <markdownNavigatorState />
-          </second_editor>
+    <entry file="file://$PROJECT_DIR$/Tests/TestUtils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="529">
+          <caret line="102" column="51" selection-start-line="102" selection-start-column="51" selection-end-line="102" selection-end-column="51" />
+          <folding>
+            <marker date="1551956000178" expanded="true" signature="501:506" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Coordinerds/Utilities/ExtensionLoader.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="27" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="27" />
+          <folding>
+            <marker date="1551841589335" expanded="true" signature="1479:1485" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/CoordinateTests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="392">
+          <caret line="28" column="19" lean-forward="true" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/ConverterTests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="379">
+          <caret line="36" column="35" lean-forward="true" selection-start-line="36" selection-start-column="35" selection-end-line="36" selection-end-column="35" />
+          <folding>
+            <element signature="e#1#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/run_tests.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
         </state>
       </provider>
     </entry>
