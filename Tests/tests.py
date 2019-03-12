@@ -42,6 +42,8 @@ if __name__=="__main__":
 
     v_level = 1 if quiet else 2
     log_stream = open(os.path.join("test_results.txt"), "w") if ("-l" in sys.argv) else sys.stderr
+    stderr1 = sys.stderr
+    sys.stderr = log_stream
     runner = TestRunner(stream = log_stream, verbosity=v_level)
 
     debug_results= None
@@ -69,6 +71,8 @@ if __name__=="__main__":
     timing_status = (timing_results is None) or timing_results.wasSuccessful()
     validate_status = (validate_results is None) or validate_results.wasSuccessful()
     overall_status = not (debug_status & timing_status & validate_status)
+
+    sys.stderr = stderr1
 
     sys.exit(overall_status)
 
