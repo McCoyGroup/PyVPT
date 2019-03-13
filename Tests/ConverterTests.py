@@ -5,7 +5,7 @@ from ..Coordinerds.CoordinateSystems import *
 class ConverterTest(TestCase):
 
     def setUp(self):
-        self.n = 10000
+        self.n = 5000
         self.test_zmats = CoordinateSet(DataGenerator.zmats(self.n, 15), system=ZMatrixCoordinates)
         self.test_carts = CoordinateSet(DataGenerator.multicoords(self.n, 10))
 
@@ -32,12 +32,12 @@ class ConverterTest(TestCase):
     def test_ZMatrixToCartesian(self):
         coords = self.test_zmats.convert(CartesianCoordinates3D, use_rad = False)
         self.assertEqual(coords.coords.shape, (self.n, 16, 3))
-    @timeitTest(number=2000)
+    @timeitTest(number=2500)
     def test_CartToZTiming(self):
         coord_set = self.test_carts
         coord_set = coord_set.convert(ZMatrixCoordinates, use_rad = False)
         self.assertEqual(coord_set.coords.shape, (self.n, 9, 6))
-    @timeitTest(number=2000)
+    @timeitTest(number=2500)
     def test_ZMatrixToCartesianTiming(self):
         coords = self.test_zmats.convert(CartesianCoordinates3D, use_rad = False)
         self.assertEqual(coords.coords.shape, (self.n, 16, 3))
