@@ -6,8 +6,96 @@
 
 #include "ZachLib.h"
 #include "PyExtLib.h"
+#include <cmath>
 
 /******************************** BEGIN MAIN PACKAGE BODY ************************************/
+
+
+/*
+ * ind2d
+ *
+ *  gets a 2D index
+ *
+ */
+int ind2d(int i, int j, int n, int m) {
+    return m*i + j;
+}
+
+/*
+ * ZachLib_StirlingS1
+ *
+ *  Basically the StirlingS1 function from Mathematica but it returns the full array of values
+ *
+ */
+FUNCWITHARGS(ZachLib_StirlingS1) {
+
+    // get a n x n identity matrix and access its underlying C-array
+    int n;
+    PARSEARGS("i", &n)
+    PyObject *stirlingsObj = _CreateIdentity(n, "int64");
+    int sgn;
+    int idx1, idx2, idx3;
+    long long *stirlings = _GetDataArray<long long>(stirlingsObj);
+
+    // Compute Stirling numbers via the recurrence
+    //      s(n + 1, k) = -n*s(n, k) + s(n, k-1)
+    for (int i = 1; i < n; i++){
+        for (int j = 1; j < i+1; j++) {
+            if ((i-j) % 2 == 0) {
+                sgn = 1;
+            } else {
+                sgn = -1;
+            }
+            idx1 = ind2d(i, j, n, n);
+            idx2 = ind2d(i-1, j, n, n);
+            idx3 = ind2d(i-1, j-1, n, n);
+            stirlings[idx1] = sgn * ( (i-1)*abs(stirlings[idx2]) + abs(stirlings[idx3]) );
+        }
+    }
+
+    return stirlingsObj;
+
+}
+
+/*
+ * ZachLib_StirlingS1
+ *
+ *  Basically the StirlingS1 function from Mathematica but it returns the full array of values
+ *
+ */
+FUNCWITHARGS(ZachLib_Binomial) {
+
+    // get a n x n identity matrix and access its underlying C-array
+    int n;
+    PARSEARGS("i", &n)
+    PyObject *binomObj = _CreateIdentity(n, "int64");
+    long long *binoms = _GetDataArray<long long>(binomObj);
+    // fill in first column with ones
+    for (int i = 0; i<n; i++) {
+        int ind = ind2d(i, 0, n, n);
+        binoms[ind] = 1;
+    }
+    // implement Binomial coeffs recursively
+    int k;
+    for (int i = 2; i < n; i++) {
+        if ( i % 2 == 0 ) {
+            k = i / 2 + 1;
+        } else {
+            k = (i + 1) /2;
+        }
+        for (int j = 1; j < k; j ++) {
+            int ind1 = ind2d(i, j, n, n);
+            int ind2 = ind2d(i-1, j-1, n, n);
+            int ind3 = ind2d(i-1, j, n, n);
+            int ind4 = ind2d(i, i-j, n, n);
+            binoms[ind1] = binoms[ind2] + binoms[ind3];
+            binoms[ind4] = binoms[ind1];
+        }
+    }
+
+    return binomObj;
+
+}
 
 /*
  * ZachLib_UnevenFiniteDifferenceWeights
@@ -16,10 +104,6 @@
        https://pdfs.semanticscholar.org/8bf5/912bde884f6bd4cfb4991ba3d077cace94c0.pdf
  * and fill a preallocated numpy array
  */
-
-int ind2d(int i, int j, int n, int m) {
-    return m*i + j;
-}
 FUNCWITHARGS(ZachLib_UnevenFiniteDifferenceWeights) {
 
     Py_ssize_t m;
@@ -95,6 +179,8 @@ FUNCWITHARGS(ZachLib_UnevenFiniteDifferenceWeights) {
 
 static PyMethodDef ZachLibMethods[] = {
     {"UnevenFiniteDifferenceWeights", ZachLib_UnevenFiniteDifferenceWeights, METH_VARARGS, ""},
+    {"StirlingS1", ZachLib_StirlingS1, METH_VARARGS, ""},
+    {"Binomial", ZachLib_Binomial, METH_VARARGS, ""}
 };
 
 const char ZachLib_doc[] = "ZachLib is a layer for doing performance critical stuff";

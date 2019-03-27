@@ -110,20 +110,63 @@ PyObject *_ArrayAsType(PyObject *array, const char *type) {
 
 }
 
-PyObject *_CreateArray(int depth, int *dims, const char *ctor) {
+PyObject *_CreateFromNumPy(const char *ctor, PyObject *args, PyObject *kwargs) {
+
     PyObject *array_module = PyImport_ImportModule("numpy");
     CHECKNULL(array_module);
     PyObject *builder = PyObject_GetAttrString(array_module, ctor);
     CHECKCLEAN(builder, array_module);
+    PyObject *cArray = PyObject_Call(builder, args, kwargs);
+    CHECKCLEAN(cArray, builder, array_module);
+    CLEANUP(builder, array_module);
+
+    return cArray;
+}
+PyObject *_CreateFromNumPy(const char *ctor, PyObject *args, const char *dtype) {
+
+    PyObject *array_module = PyImport_ImportModule("numpy");
+    CHECKNULL(array_module);
+    PyObject *typeObj = PyObject_GetAttrString(array_module, dtype);
+    CHECKCLEAN(typeObj, array_module);
+    PyObject *kwargs = Py_BuildValue("{s:O}", "dtype", typeObj);
+    CHECKCLEAN(kwargs, typeObj, array_module);
+
+    PyObject *cArray = _CreateFromNumPy(ctor, args, kwargs);
+    CHECKCLEAN(cArray, kwargs, typeObj, array_module);
+    CLEANUP(kwargs, typeObj, array_module);
+
+    return cArray;
+}
+
+PyObject *_CreateIdentity(int m, const char *dtype) {
+
+    PyObject *args = Py_BuildValue("(i)", m);
+    CHECKNULL(args);
+    PyObject *cArray = _CreateFromNumPy("eye", args, dtype);
+    CHECKCLEAN(cArray, args);
+    CLEANUP(args);
+
+    return cArray;
+}
+PyObject *_CreateIdentity(int m) {
+    return _CreateIdentity(m, "int8");
+}
+PyObject *_CreateArray(int depth, int *dims, const char *ctor, const char *dtype) {
+
     PyObject *dimObj = PyList_New(depth);
+    CHECKNULL(dimObj);
     for (int j = 0; j<depth; j++){
         PyList_SetItem(dimObj, j, Py_BuildValue("i", dims[j]));
     }
-    PyObject *cArray = PyObject_CallFunction(builder, "O", dimObj);
-    CHECKCLEAN(cArray, builder, array_module);
-    CLEANUP(array_module, builder);
+    PyObject *args = Py_BuildValue("(O)", dimObj);
+    PyObject *cArray = _CreateFromNumPy(ctor, args, dtype);
+    CHECKCLEAN(cArray, args, dimObj);
+    CLEANUP(args, dimObj);
 
     return cArray;
+}
+PyObject *_CreateArray(int depth, int *dims, const char *ctor) {
+    return _CreateArray(depth, dims, ctor, "float64");
 }
 
 

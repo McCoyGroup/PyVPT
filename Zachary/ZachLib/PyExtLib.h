@@ -113,5 +113,9 @@ int _DebugPrintObject(int lvl, PyObject *o);
 
 PyObject *_ArrayAsType(PyObject *array, const char *type);
 
+PyObject *_CreateFromNumPy(const char *ctor, PyObject *args, PyObject *kwargs);
+PyObject *_CreateFromNumPy(const char *ctor, PyObject *args, const char *dtype);
+PyObject *_CreateIdentity(int m, const char *dtype);
+PyObject *_CreateArray(int depth, int *dims, const char *ctor, const char *dtype);
 PyObject *_CreateArray(int depth, int *dims, const char *ctor);
 

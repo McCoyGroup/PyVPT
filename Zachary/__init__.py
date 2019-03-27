@@ -2,4 +2,4 @@
 
 """
 
-from .FiniteDifferenceFunction import FiniteDifferenceFunction
+from .FiniteDifferenceFunction import FiniteDifferenceFunction, finite_difference

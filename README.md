@@ -35,13 +35,13 @@ The Python Vibrational Perturbation Theory package (PyVPT) is intended to make i
 
 ### Expansions
  
- - [ ] Implement arbitrary order finite differencing (just up to 4th?)
+ - [x] Implement arbitrary order finite differencing (still needs higher-dimensional extension)
  - [ ] Provide utility type representing function over a coordinate set
  - [ ] Implement actual expression for a fourth-order potential expansion (make C-compileable...?)
 
 ### Perturbation Theory
  
- - [ ] Write efficient Gaussian Log File importer
+ - [ ] Write efficient Gaussian Log File importer (in process)
  - [ ] Get potential expansions with Gaussian potential / force consts
  - [ ] Implement proper exprs for perturbation expansions
 
