@@ -40,6 +40,8 @@ class FiniteDifferenceFunction:
         :return:
         :rtype:
         """
+
+        # Gotta make sure we have the right dimensions for our derivatives
         if isinstance(n, int):
             if not isinstance(dimension, int):
                 dimension =1

@@ -64,7 +64,7 @@ def vec_normalize(vecs):
 def vec_crosses(vecs1, vecs2, normalize=False):
     crosses = np.cross(vecs1, vecs2)
     if normalize:
-        crosses = crosses/vec_norms(crosses)
+        crosses = crosses/vec_norms(crosses)[:, np.newaxis]
     return crosses
 
 ################################################
@@ -172,10 +172,22 @@ def pts_dihedrals(pts1, pts2, pts3, pts4):
     :return:
     :rtype:
     """
-    # should I normalize these...?
-    normals = pts_normals(pts2, pts1, pts3, normalize=False)
-    off_plane_vecs = pts4-pts3
-    return vec_angles(off_plane_vecs, normals)[0]
+    # # should I normalize these...?
+    # normals = pts_normals(pts2, pts3, pts4, normalize=False)
+    # off_plane_vecs = pts1 - pts4
+    # return vec_angles(normals, off_plane_vecs)[0]
+
+    # # less efficient but mirrors what I did in Mathematica (and works)
+    b1 = pts2-pts1
+    b2 = pts3-pts2
+    b3 = pts4-pts3
+
+    n1 = vec_crosses(b1, b2, normalize=True)
+    n2 = vec_crosses(b2, b3, normalize=True)
+    m1 = vec_crosses(n1, vec_normalize(b2))
+    d1 = vec_dots(n1, n2)
+    d2 = vec_dots(m1, n2)
+    return np.arctan2(d2, d1)
 
 ################################################
 #

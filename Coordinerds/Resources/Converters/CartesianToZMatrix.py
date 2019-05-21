@@ -60,7 +60,7 @@ class CartesianToZMatrixConverter(CoordinateSystemConverter):
         return vec_angles(v1s, v2s)[0]
     @staticmethod
     def get_diheds(points, centers, seconds, thirds):
-        return pts_dihedrals(centers, seconds, thirds, points)
+        return pts_dihedrals(points, centers, seconds, thirds)
 
     def convert_many(self, coords, ordering = None, use_rad=True, **kw):
         """We'll implement this by having the ordering arg wrap around in coords?

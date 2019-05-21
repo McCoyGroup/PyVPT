@@ -9,6 +9,45 @@ class ConverterTest(TestCase):
         self.test_zmats = CoordinateSet(DataGenerator.zmats(self.n, 15), system=ZMatrixCoordinates)
         self.test_carts = CoordinateSet(DataGenerator.multicoords(self.n, 10))
 
+    @debugTest
+    def test_Dihedral(self):
+        from ..Coordinerds.CoordinateTransformations.TransformationUtilities.VectorOps import pts_dihedrals as calc_dihed
+        orig = np.array([
+            [
+                0.0,
+                0.0,
+                0.0
+            ],
+            [
+                -0.8247121421923925,
+                -0.629530611338456,
+                1.775332267901544
+            ],
+            [
+                0.1318851447521099,
+                2.088940054609643,
+                0.0
+            ],
+            [
+                1.786540362044548,
+                -1.386051328559878,
+                0.0
+            ],
+            [
+                2.233806981137821,
+                0.3567096955165336,
+                0.0
+            ],
+            [
+                -0.8247121421923925,
+                -0.629530611338456,
+                -1.775332267901544
+            ]
+        ])
+
+        dihed = calc_dihed(orig[3:5], orig[2:4], orig[1:3], orig[0:2])
+        self.assertEquals(round(dihed[0], 6), round(.591539, 6))
+
     @validationTest
     def test_CoordinateSet(self):
         import numpy as np
