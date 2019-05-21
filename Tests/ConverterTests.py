@@ -1,6 +1,7 @@
 
 from .TestUtils import *
 from ..Coordinerds.CoordinateSystems import *
+import sys
 
 class ConverterTest(TestCase):
 
@@ -9,8 +10,8 @@ class ConverterTest(TestCase):
         self.test_zmats = CoordinateSet(DataGenerator.zmats(self.n, 15), system=ZMatrixCoordinates)
         self.test_carts = CoordinateSet(DataGenerator.multicoords(self.n, 10))
 
-    @debugTest
-    def test_Dihedral(self):
+    @validationTest
+    def test_GetDihedrals(self):
         from ..Coordinerds.CoordinateTransformations.TransformationUtilities.VectorOps import pts_dihedrals as calc_dihed
         orig = np.array([
             [
@@ -68,7 +69,32 @@ class ConverterTest(TestCase):
         coord_set = coord_set.convert(ZMatrixCoordinates, use_rad = False)
         self.assertEqual(coord_set.coords.shape, (10, 9, 6))
     @validationTest
+    def test_CartesianToZMatrixAndBack(self):
+        coord_set = CoordinateSet([
+            [
+                [ 0.0,                    0.0,                    0.0 ],
+                [ 0.5312106220949451,     0.0,                    0.0 ],
+                [ 5.4908987527698905e-2,  0.5746865893353914,     0.0 ],
+                [ -6.188515885294378e-2, -2.4189926062338385e-2,  0.4721688095375285 ],
+                [ 1.53308938205413e-2,    0.3833690190410768,     0.23086294551212294 ],
+                [ 0.1310095622893345,     0.30435650497612,       0.5316931774973834 ]
+                ]
+        ]*2)
+        coord_set = coord_set.convert(ZMatrixCoordinates)
+        # zz1 = coord_set.coords
+        # print(zz1[0], file=sys.stderr)
+        # print(zz1[1], file=sys.stderr)
+        coord_set = coord_set.convert(CartesianCoordinates3D)
+        cs1 = coord_set.coords
+        # print(cs1[1], file=sys.stderr)
+        coord_set = coord_set.convert(ZMatrixCoordinates)
+        coord_set = coord_set.convert(CartesianCoordinates3D)
+        cs2 = coord_set.coords
+        # print(cs2)
+        self.assertEqual(round(np.linalg.norm(cs2 - cs1), 8), 0.)
+    @validationTest
     def test_ZMatrixToCartesian(self):
+        # print(self.test_zmats.coords[0, 0], file=sys.stderr)
         coords = self.test_zmats.convert(CartesianCoordinates3D, use_rad = False)
         self.assertEqual(coords.coords.shape, (self.n, 16, 3))
     @timeitTest(number=2500)

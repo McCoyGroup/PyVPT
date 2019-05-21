@@ -165,6 +165,8 @@ class CartesianToZMatrixConverter(CoordinateSystemConverter):
                 coords[ol[mask, 0]],
                 coords[ol[mask, 1]]
             )
+
+            # set up the mask to drop all of the first bits
             mask[np.arange(1, ncoords, nol)] = False
             angles = self.get_angles(
                 coords[ol[mask, 0]],
@@ -172,10 +174,13 @@ class CartesianToZMatrixConverter(CoordinateSystemConverter):
                 coords[ol[mask, 2]]
             )
             angles = np.append(angles, np.zeros(steps))
-            angles = np.insert(angles, np.arange(0, ncoords-1*steps-1, nol-1), 0)
+            insert_pos = np.arange(0, ncoords-1*steps-1, nol-2)
+            angles = np.insert(angles, insert_pos, 0)
             angles = angles[:ncoords-steps]
             if not use_rad:
                 angles = np.rad2deg(angles)
+
+            # set up mask to drop all of the second bits (wtf it means 'second')
             mask[np.arange(2, ncoords, nol)] = False
             diheds = self.get_diheds(
                 coords[ol[mask, 0]],
@@ -184,7 +189,7 @@ class CartesianToZMatrixConverter(CoordinateSystemConverter):
                 coords[ol[mask, 3]]
             )
             diheds = np.append(diheds, np.zeros(2*steps))
-            diheds = np.insert(diheds, np.repeat(np.arange(0, ncoords-2*steps-1, nol-2), 2), 0)
+            diheds = np.insert(diheds, np.repeat(np.arange(0, ncoords-2*steps-1, nol-3), 2), 0)
             diheds = diheds[:ncoords-steps]
             if not use_rad:
                 diheds = np.rad2deg(diheds)
@@ -196,7 +201,7 @@ class CartesianToZMatrixConverter(CoordinateSystemConverter):
             mask[np.arange(0, ncoords, nol)] = False
             ol = np.reshape(ol[mask], (steps, nol-1, 4))-np.reshape(np.arange(steps), (steps, 1, 1))
             ol = np.reshape(ol, (ncoords-steps, 4))
-            om = np.reshape(om[mask], (steps, nol-1))-np.reshape(np.arange(steps), (steps, 1))
+            om = np.reshape(om[mask], (steps, nol-1))-nol*np.reshape(np.arange(steps), (steps, 1))-1
             om = np.reshape(om, (ncoords-steps,))
 
         #### should find some way to return the order ?

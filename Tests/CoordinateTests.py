@@ -1,6 +1,7 @@
 
 from .TestUtils import *
 from ..Coordinerds.CoordinateTransformations.TransformationUtilities import *
+import sys
 
 class TestAffineMatrix(TestCase):
 
