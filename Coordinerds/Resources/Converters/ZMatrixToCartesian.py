@@ -32,15 +32,18 @@ class ZMatrixToCartesianConverter(CoordinateSystemConverter):
         :return:
         :rtype:
         """
-        crosses = vec_crosses(vecs1, vecs2)
-        # raise Exception(crosses)
-        rot_mats_1 = rotation_matrix(crosses, angles)
+        crosses = vec_crosses(vecs2, vecs1)
+        rot_mats_1 = rotation_matrix(crosses, angles) # not entirely
         if dihedrals is not None:
-            rot_mats_2 = rotation_matrix(vecs2, dihedrals)
-            rot_mat = np.matmul(rot_mats_1, rot_mats_2)
+            # this is where things break down
+            # looks like I don't get the correct rotation into the dihedral frame
+            rot_mats_2 = rotation_matrix(vecs1, -dihedrals)
+            # raise Exception(dihedrals, vecs2, rot_mats_2)
+            rot_mat = np.matmul(rot_mats_2, rot_mats_1)
         else:
             rot_mat = rot_mats_1
         transfs = affine_matrix(rot_mat, centers)
+        # raise Exception(transfs, rot_mats_1, crosses, angles, vecs1)
         return transfs
 
     def build_next_points(self, refs1, dists, refs2, angles, refs3, dihedrals):
@@ -105,14 +108,16 @@ class ZMatrixToCartesianConverter(CoordinateSystemConverter):
 
         # iteratively build the rest of the coords with one special cases for n=2
         for i in range(1, coordnum):
-            # raise Exception(coordlist[:, i, [0, 2, 4]])
-            ref_coords1 = coordlist[:, i, 0].astype(np.int8) - 1
-            refs1 = total_points[np.arange(sysnum), ref_coords1]
-            dists = np.reshape(coordlist[:, i, 1], (sysnum, 1))
 
-            ref_coords2 = coordlist[:, i, 2].astype(np.int8) - 1
-            refs2 = total_points[np.arange(sysnum), ref_coords2]
-            angle = coordlist[:, i, 3]
+            # Get the distances away
+            # raise Exception(coordlist[:, i, [0, 2, 4]])
+            ref_coords1 = coordlist[:, i, 0].astype(np.int8) - 1 # reference atom numbers for first coordinate
+            refs1 = total_points[np.arange(sysnum), ref_coords1] # get the actual reference coordinates
+            dists = np.reshape(coordlist[:, i, 1], (sysnum, 1)) # pull the requisite distances
+
+            ref_coords2 = coordlist[:, i, 2].astype(np.int8) - 1 # reference atom numbers for second coordinate
+            refs2 = total_points[np.arange(sysnum), ref_coords2] # get the actual reference coordinates for the angle
+            angle = coordlist[:, i, 3] # pull the requisite angle values
             if not use_rad:
                 angle = np.deg2rad(angle)
 
@@ -120,15 +125,15 @@ class ZMatrixToCartesianConverter(CoordinateSystemConverter):
                 refs3 = None
                 dihed = None
             else:
-                ref_coords3 = coordlist[:, i, 4].astype(np.int8) - 1
-                refs3 = total_points[np.arange(sysnum), ref_coords3]
-                dihed = coordlist[:, i, 5]
+                ref_coords3 = coordlist[:, i, 4].astype(np.int8) - 1 # reference atom numbers for dihedral ref coordinate
+                refs3 = total_points[np.arange(sysnum), ref_coords3] # get the actual reference coordinates for the dihed
+                dihed = coordlist[:, i, 5] # pull proper dihedral values
                 if not use_rad:
                     dihed = np.deg2rad(dihed)
 
             # I FUCKING CAN"T GENERATE A FUCKING PIECE OF SHIT RANDOM Z MATRIX AND THAT IS ALL THAT IS FUCKING ME RIGHT NOW
             # raise Exception((coordlist[:, :, [0, 2]], coordlist[:, i, [0, 2]], ref_coords1-ref_coords2))
-            ref_points = self.build_next_points(refs1, dists, refs2, angle, refs3, dihed)
+            ref_points = self.build_next_points(refs1, dists, refs2, angle, refs3, dihed) # iteratively build z-mat
             total_points[:, i+1] = ref_points
 
         return total_points

@@ -3,11 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="b76b76cb-ce7f-4344-acde-240669f1c9ad" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coordinerds/CoordinateTransformations/TransformationUtilities/VectorOps.py" beforeDir="false" afterPath="$PROJECT_DIR$/Coordinerds/CoordinateTransformations/TransformationUtilities/VectorOps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coordinerds/Resources/Converters/CartesianToZMatrix.py" beforeDir="false" afterPath="$PROJECT_DIR$/Coordinerds/Resources/Converters/CartesianToZMatrix.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coordinerds/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Coordinerds/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/ConverterTests.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/ConverterTests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zachary/FiniteDifferenceFunction.py" beforeDir="false" afterPath="$PROJECT_DIR$/Zachary/FiniteDifferenceFunction.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coordinerds/CoordinateTransformations/TransformationUtilities/TransformationMatrices.py" beforeDir="false" afterPath="$PROJECT_DIR$/Coordinerds/CoordinateTransformations/TransformationUtilities/TransformationMatrices.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coordinerds/Resources/Converters/ZMatrixToCartesian.py" beforeDir="false" afterPath="$PROJECT_DIR$/Coordinerds/Resources/Converters/ZMatrixToCartesian.py" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -85,8 +82,8 @@
           <entry key="C++" value="1511" />
           <entry key="Markdown" value="2612" />
           <entry key="Mathematica" value="9" />
-          <entry key="PLAIN_TEXT" value="358" />
-          <entry key="Python" value="49238" />
+          <entry key="PLAIN_TEXT" value="380" />
+          <entry key="Python" value="49841" />
           <entry key="YAML" value="24" />
         </counts>
       </usages-collector>
@@ -106,7 +103,7 @@
           <entry key="Markdown" value="3" />
           <entry key="Mathematica" value="1" />
           <entry key="PLAIN_TEXT" value="10" />
-          <entry key="Python" value="106" />
+          <entry key="Python" value="110" />
           <entry key="Scratch" value="1" />
           <entry key="YAML" value="1" />
         </counts>
@@ -115,15 +112,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Zachary/ZachLib/ZachLib.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" column="1" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Zachary/FiniteDifferenceFunction.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -166,44 +154,53 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Coordinerds/CoordinateTransformations/TransformationUtilities/VectorOps.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="258">
-              <caret line="178" lean-forward="true" selection-start-line="178" selection-end-line="178" />
+            <state relative-caret-position="-629">
+              <caret line="179" column="30" selection-start-line="179" selection-start-column="30" selection-end-line="179" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Coordinerds/CoordinateTransformations/TransformationUtilities/TransformationTransformations.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="17" column="46" selection-start-line="17" selection-start-column="46" selection-end-line="17" selection-end-column="46" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Coordinerds/CoordinateTransformations/AffineTransform.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1242">
+              <caret line="86" column="30" lean-forward="true" selection-start-line="86" selection-start-column="30" selection-end-line="86" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Coordinerds/Resources/Converters/CartesianToZMatrix.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="570">
+              <caret line="41" column="46" lean-forward="true" selection-start-line="41" selection-start-column="46" selection-end-line="41" selection-end-column="46" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Coordinerds/Resources/Converters/CartesianToZMatrix.py">
+        <entry file="file://$PROJECT_DIR$/Coordinerds/Resources/Converters/ZMatrixToCartesian.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="59" column="38" lean-forward="true" selection-start-line="59" selection-start-column="38" selection-end-line="59" selection-end-column="38" />
+            <state relative-caret-position="290">
+              <caret line="39" column="49" selection-start-line="39" selection-start-column="49" selection-end-line="39" selection-end-column="49" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Zachary/ZachLib/setup.py">
+        <entry file="file://$PROJECT_DIR$/Coordinerds/CoordinateTransformations/TransformationUtilities/TransformationMatrices.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="22" selection-start-line="22" selection-end-line="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Zachary/ZachLib/lib.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Zachary/ZachLib/__init__.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="18" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
+            <state relative-caret-position="188">
+              <caret line="190" column="31" lean-forward="true" selection-start-line="190" selection-start-column="31" selection-end-line="190" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -261,8 +258,6 @@
         <option value="$PROJECT_DIR$/Tests/TimingTests.py" />
         <option value="$PROJECT_DIR$/Tests/DataGenerator.py" />
         <option value="$PROJECT_DIR$/Tests/CoordinateTests.py" />
-        <option value="$PROJECT_DIR$/Coordinerds/CoordinateTransformations/TransformationUtilities/TransformationMatrices.py" />
-        <option value="$PROJECT_DIR$/Coordinerds/Resources/Converters/ZMatrixToCartesian.py" />
         <option value="$PROJECT_DIR$/Tests/TestUtils.py" />
         <option value="$PROJECT_DIR$/Tests/tests.py" />
         <option value="$PROJECT_DIR$/.travis.yml.py" />
@@ -296,6 +291,8 @@
         <option value="$PROJECT_DIR$/Tests/ConverterTests.py" />
         <option value="$PROJECT_DIR$/Coordinerds/CoordinateTransformations/TransformationUtilities/VectorOps.py" />
         <option value="$PROJECT_DIR$/Coordinerds/Resources/Converters/CartesianToZMatrix.py" />
+        <option value="$PROJECT_DIR$/Coordinerds/CoordinateTransformations/TransformationUtilities/TransformationMatrices.py" />
+        <option value="$PROJECT_DIR$/Coordinerds/Resources/Converters/ZMatrixToCartesian.py" />
       </list>
     </option>
   </component>
@@ -644,7 +641,14 @@
       <option name="project" value="LOCAL" />
       <updated>1553704971206</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Patched dihedral calc">
+      <created>1558470958432</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1558470958432</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -665,13 +669,13 @@
     <frame x="1691" y="49" width="1217" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19404255" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19404255" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32953367" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4986945" visible="true" weight="0.38471338" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4986945" visible="true" weight="0.38471338" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -726,7 +730,8 @@
     <MESSAGE value="Added Road Map" />
     <MESSAGE value="Added finite difference weight code" />
     <MESSAGE value="Updated road map a bit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated road map a bit" />
+    <MESSAGE value="Patched dihedral calc" />
+    <option name="LAST_COMMIT_MESSAGE" value="Patched dihedral calc" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -769,13 +774,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Coordinerds/Utilities/MiscUtils.py" />
-    <entry file="file://$PROJECT_DIR$/Coordinerds/CoordinateTransformations/AffineTransform.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="81" column="19" lean-forward="true" selection-start-line="81" selection-start-column="19" selection-end-line="81" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Coordinerds/CoordinateTransformations/ScalingTransform.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -790,13 +788,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Coordinerds/CoordinateTransformations/TransformationUtilities/TransformationTransformations.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="42" lean-forward="true" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Coordinerds/CoordinateTransformations/RotationTransform.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
@@ -805,13 +796,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pre-commit-hook.sh" />
-    <entry file="file://$PROJECT_DIR$/Coordinerds/CoordinateTransformations/TransformationUtilities/TransformationMatrices.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="42" column="42" selection-start-line="42" selection-start-column="42" selection-end-line="42" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/progress_log.md" />
     <entry file="file://$PROJECT_DIR$/Tests/TestUtils.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -836,13 +820,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret line="3" column="22" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Coordinerds/Resources/Converters/ZMatrixToCartesian.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
         </state>
       </provider>
     </entry>
@@ -1039,13 +1016,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Coordinerds/CoordinateTransformations/TransformationUtilities/VectorOps.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="178" lean-forward="true" selection-start-line="178" selection-end-line="178" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Tests/ConverterTests.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="708">
@@ -1058,8 +1028,43 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Coordinerds/Resources/Converters/CartesianToZMatrix.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="59" column="38" lean-forward="true" selection-start-line="59" selection-start-column="38" selection-end-line="59" selection-end-column="38" />
+        <state relative-caret-position="570">
+          <caret line="41" column="46" lean-forward="true" selection-start-line="41" selection-start-column="46" selection-end-line="41" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Coordinerds/CoordinateTransformations/TransformationUtilities/VectorOps.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-629">
+          <caret line="179" column="30" selection-start-line="179" selection-start-column="30" selection-end-line="179" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Coordinerds/CoordinateTransformations/TransformationUtilities/TransformationTransformations.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="46" selection-start-line="17" selection-start-column="46" selection-end-line="17" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Coordinerds/CoordinateTransformations/AffineTransform.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1242">
+          <caret line="86" column="30" lean-forward="true" selection-start-line="86" selection-start-column="30" selection-end-line="86" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Coordinerds/CoordinateTransformations/TransformationUtilities/TransformationMatrices.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="190" column="31" lean-forward="true" selection-start-line="190" selection-start-column="31" selection-end-line="190" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Coordinerds/Resources/Converters/ZMatrixToCartesian.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="39" column="49" selection-start-line="39" selection-start-column="49" selection-end-line="39" selection-end-column="49" />
         </state>
       </provider>
     </entry>

@@ -115,7 +115,7 @@ def rotation_matrix_ER_vec(axes, thetas):
     return np.array([
         [aa + bb - cc - dd, 2 * (bc + ad),     2 * (bd - ac)    ],
         [2 * (bc - ad),     aa + cc - bb - dd, 2 * (cd + ab)    ],
-        [2 * (bd + ac),     2 * (cd - ab),     aa + dd - bb - cc]
+        [2 * (bd + ac),    2 * (cd - ab),     aa + dd - bb - cc]
     ]).T
 
 def rotation_matrix(axis, theta):
