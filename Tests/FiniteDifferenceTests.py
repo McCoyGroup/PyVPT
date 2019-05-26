@@ -5,13 +5,13 @@ import sys
 
 class FiniteDifferenceTests(TestCase):
 
-    @debugTest
-    def test_finite_difference_2d(self):
-        grid_1 = 4*np.math.pi / 100 * np.arange(100) + 2*np.math.pi
-        grid = np.meshgrid(grid_1, grid_1)
+    # @debugTest
+    # def test_finite_difference_2d(self):
+    #     grid_1 = 4*np.math.pi / 100 * np.arange(100) + 2*np.math.pi
+    #     grid = np.meshgrid(grid_1, grid_1)
+    #     self.assertAlmostEqual(1, 0)#round(np.linalg.norm(dtest - sin_d3_vals), 4), 0)
 
-
-    @debugTest
+    @validationTest
     def test_finite_difference(self):
         sin_grid = [
             0., 0.2513274123, 0.5026548246, 0.7539822369, 1.005309649, 1.256637061, 1.507964474,

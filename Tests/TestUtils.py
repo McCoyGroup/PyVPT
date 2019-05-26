@@ -2,9 +2,13 @@
 
 """
 
-import unittest, timeit, numpy as np, functools
+import unittest, timeit, numpy as np, functools, os
 
 TestCase = unittest.TestCase #just in case I want to change this up later
+
+test_data_dir = os.path.join(os.path.dirname(__file__), "TestData")
+def test_data(filename):
+    return os.path.join(test_data_dir, filename)
 
 class DataGenerator:
     """Provides methods to generate relevant data for testing methods

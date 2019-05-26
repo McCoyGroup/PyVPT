@@ -7,17 +7,6 @@ Every type of tests should be its own module and should be tagged as either a Fa
 
 """
 
-
-
-
-
-
-
-
-
-
-
-
 if __name__=="__main__":
     import os, sys
     tests_dir = os.path.dirname(os.path.abspath(__file__))

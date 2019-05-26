@@ -15,7 +15,7 @@ def vec_dot_vanilla(vecs1, vecs2):
 def vec_dot_matty(vecs1, vecs2):
     return np.diag(np.matmul(vecs1, vecs2.T))
 
-def vec_dots(vecs1, vecs2, mode = None, arbitrary_cutoff = 1000000):
+def vec_dots(vecs1, vecs2, mode = None, arbitrary_cutoff = 0):
     """Computes the pair-wise dot product of two lists of vecs
 
     # some question as to the fastest way to compute pairwise dot products of a pile of vectors

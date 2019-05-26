@@ -1,0 +1,73 @@
+
+from .TestUtils import *
+from ..Utils.GaussianImport import *
+import sys, os
+
+class GaussianImportTests(TestCase):
+
+    test_log_water = test_data("water_OH_scan.log")
+    test_log_freq = test_data("water_freq.log")
+    test_fchk = test_data("water_freq.fchk")
+    test_log_h2 = test_data("outer_H2_scan_new.log")
+
+    @validationTest
+    def test_GaussianLoad(self):
+        with GaussianLogReader(self.test_log_water) as reader:
+            parse = reader.parse("InputZMatrix")
+        zmat = parse["InputZMatrix"]
+        self.assertIsInstance(zmat, str)
+
+    @validationTest
+    def test_GaussianCartesians(self):
+        with GaussianLogReader(self.test_log_water) as reader:
+            parse = reader.parse("CartesianCoordinates", num = 15)
+        carts = parse["CartesianCoordinates"]
+        self.assertIsInstance(carts[1], np.ndarray)
+        self.assertEquals(carts[1].shape, (15, 3, 3))
+
+    @validationTest
+    def test_GZMatCoords(self):
+        with GaussianLogReader(self.test_log_water) as reader:
+            parse = reader.parse("ZMatrices", num = 3)
+        zmats = parse["ZMatrices"]
+        # print(zmats, file=sys.stderr)
+        self.assertIsInstance(zmats[1], np.ndarray)
+        self.assertEquals(zmats[1].shape, (2, 3))
+        self.assertEquals(zmats[2].shape, (3, 2, 3))
+
+    @validationTest
+    def test_GZMatCoordsBiggie(self):
+        num_pulled = 5
+        num_entries = 8
+        with GaussianLogReader(self.test_log_h2) as reader:
+            parse = reader.parse("ZMatrices", num = num_pulled)
+        zmats = parse["ZMatrices"]
+        # print(zmats, file=sys.stderr)
+        self.assertIsInstance(zmats[1], np.ndarray)
+        self.assertEquals(zmats[1].shape, (num_entries-1, 3))
+        self.assertEquals(zmats[2].shape, (num_pulled, num_entries-1, 3))
+
+    @validationTest
+    def test_Fchk(self):
+        with GaussianFChkReader(self.test_fchk) as reader:
+            parse = reader.parse()
+        key = next(iter(parse.keys()))
+        self.assertIsInstance(key, str)
+
+    @validationTest
+    def test_ForceConstants(self):
+        n = 3 # water
+        with GaussianFChkReader(self.test_fchk) as reader:
+            parse = reader.parse("ForceConstants")
+        fcs = parse["ForceConstants"]
+        self.assertEquals(fcs.n, n)
+        self.assertEquals(fcs.array.shape, (3*n, 3*n))
+
+    @debugTest
+    def test_ForceConstants(self):
+        n = 3 # water
+        with GaussianFChkReader(self.test_fchk) as reader:
+            parse = reader.parse("ForceDerivatives")
+        fcs = parse["ForceDerivatives"]
+        self.assertEquals(fcs.n, n)
+
