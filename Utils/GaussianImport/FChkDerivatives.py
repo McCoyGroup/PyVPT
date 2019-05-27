@@ -57,7 +57,7 @@ class FchkForceDerivatives:
             else:
                 l1 = -(-l_body)**(1/3)
             n = (1/18)*( 10 + (2**(1/3))*( l1 - 86/l1) )
-            self._n = np.ceil(n) # precision issues screw this up in python, but not in Mathematica (I think)
+            self._n = int(np.ceil(n)) # precision issues screw this up in python, but not in Mathematica (I think)
         return self._n
     @property
     def n(self):
@@ -77,48 +77,57 @@ class FchkForceDerivatives:
     def fourth_derivs(self):
         return self._get_fourth_derivs()
 
+    @staticmethod
+    def _fill_3d_tensor(n, derivs):
+        """Makes and fills a 3D tensor for our derivatives
+
+        :param n:
+        :type n:
+        :param derivs:
+        :type derivs:
+        :return:
+        :rtype: np.ndarray
+        """
+        dim_1 = (3*n)
+        mode_n = 3*n-6
+        full_array_1 = np.zeros((mode_n, dim_1, dim_1))
+        # set the lower triangle
+        inds_1 = np.tril_indices_from(full_array_1[0])
+        l_per = len(inds_1[0])
+        main_ind = np.broadcast_to(np.arange(mode_n), (l_per, mode_n)).flatten(order="F")
+        sub_ind_1 = np.broadcast_to(inds_1[0], (mode_n, l_per)).flatten()
+        sub_ind_2 = np.broadcast_to(inds_1[1], (mode_n, l_per)).flatten()
+        inds = ( main_ind, sub_ind_1, sub_ind_2 )
+        full_array_1[inds] = derivs
+        # set the upper triangle
+        inds2 = ( main_ind, sub_ind_2, sub_ind_1 ) # basically just taking a transpose
+        full_array_1[inds2] = derivs
+        return full_array_1
+
     def _get_third_deriv_array(self):
-        """we make a (3n-6)(3n)^2 X (3n-6)(3n)^2 array to fill from the third_derivs
-        and then symmetrize it
+        """we make the appropriate 3D tensor from a bunch of 2D tensors
 
         :return:
         :rtype: np.ndarray
         """
         n = self.n
         derivs = self.third_derivs
-        dim = (3*n-6)*(3*n)**2
-        full_array_1 = np.zeros((dim, dim))
-        inds_1 = np.tril_indices_from(full_array_1)
-        full_array_1[inds_1] = derivs
-        full_array_1 = full_array_1 + np.tril(full_array_1, 1).T
-        return full_array_1
+        return self._fill_3d_tensor(n, derivs)
+
     @property
     def third_deriv_array(self):
         return self._get_third_deriv_array()
 
     def _get_fourth_deriv_array(self):
-        """We'll make our array of fourth derivs a sparse matrix with the 3n
+        """We'll make our array of fourth derivs exactly the same as the third
+        admittedly this should be a 4D tensor, but we only have the diagonal elements so it's just 3D
 
         :return:
         :rtype: sparse.csr_matrix
         """
-        # do the same for the diagonal 4th derivs
         n = self.n
-        fds = self.fourth_derivs
-        dim1 =(3*n-6)*(3*n)**2
-        dim = (3*n-6)*dim1
-
-        inds = np.tril_indices(dim1) # generates a tuple by default I think...
-        inds_mat_0 = np.broadcast(inds[0], (3*n-6, np.shape(inds[0])))
-        inds_mat_1 = np.broadcast(inds[1], (3*n-6, np.shape(inds[1])))
-        inds = (
-            np.reshape(inds_mat_0, (dim,)),
-            np.reshape(inds_mat_1, (dim,))
-        )
-        fdarray = sparse.csr_matrix((), shape=((dim, dim)))
-        fdarray[inds] = fds # hopefully this works...
-        fdarray = fdarray + np.tril(fdarray, 1).T
-        return fdarray
+        derivs = self.fourth_derivs
+        return self._fill_3d_tensor(n, derivs)
 
     @property
     def fourth_deriv_array(self):

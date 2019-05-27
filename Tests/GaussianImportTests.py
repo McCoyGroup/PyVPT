@@ -63,11 +63,31 @@ class GaussianImportTests(TestCase):
         self.assertEquals(fcs.n, n)
         self.assertEquals(fcs.array.shape, (3*n, 3*n))
 
-    @debugTest
-    def test_ForceConstants(self):
+    @validationTest
+    def test_ForceThirdDerivatives(self):
         n = 3 # water
         with GaussianFChkReader(self.test_fchk) as reader:
             parse = reader.parse("ForceDerivatives")
         fcs = parse["ForceDerivatives"]
+        tds = fcs.third_deriv_array
         self.assertEquals(fcs.n, n)
+        self.assertEquals(tds.shape, ((3*n-6), (3*n), 3*n))
+        a = tds[0]
+        self.assertTrue(
+            np.allclose(a, a.T, rtol=1e-08, atol=1e-08)
+            )
+
+    @validationTest
+    def test_ForceFourthDerivatives(self):
+        n = 3 # water
+        with GaussianFChkReader(self.test_fchk) as reader:
+            parse = reader.parse("ForceDerivatives")
+        fcs = parse["ForceDerivatives"]
+        tds = fcs.fourth_deriv_array
+        self.assertEquals(fcs.n, n)
+        self.assertEquals(tds.shape, ((3*n-6), (3*n), 3*n))
+        a = tds[0]
+        self.assertTrue(
+            np.allclose(a, a.T, rtol=1e-08, atol=1e-08)
+        )
 

@@ -30,7 +30,7 @@ acart_p = "("+int_p+")"+ws_p+cart_p # atom coordinate as comes from a XYZ table
 acart_p_c = re.compile(acart_p) # adds a little bit of a performance boost
 cart_p_c = re.compile(cart_p)
 cart_str_c = re.compile(ws_p.join([ num_p ]*3))
-def pull_coords(txt, regex = cart_str_c, coord_dim = 3):
+def pull_coords(txt, regex = cart_p_c, coord_dim = 3):
     """Pulls just the Cartesian coordinates out of the string
 
     :param txt: some string that has Cartesians in it somewhere
@@ -44,9 +44,12 @@ def pull_coords(txt, regex = cart_str_c, coord_dim = 3):
     """
     coords = re.findall(regex, txt)
     base_arr = np.array(coords, dtype=np.str).astype(dtype=np.float64)
-    num_els = base_arr.shape[0]
-    new_shape = (int(num_els/coord_dim), coord_dim) # for whatever weird reason this wasn't int...?
-    new_arr = np.reshape(base_arr, new_shape)
+    if len(base_arr.shape) == 1:
+        num_els = base_arr.shape[0]
+        new_shape = (int(num_els/coord_dim), coord_dim) # for whatever weird reason this wasn't int...?
+        new_arr = np.reshape(base_arr, new_shape)
+    else:
+        new_arr = base_arr
     return new_arr
 
 def pull_xyz(txt, num_atoms = None, regex = acart_p_c):
