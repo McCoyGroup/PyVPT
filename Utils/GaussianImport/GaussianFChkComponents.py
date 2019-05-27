@@ -90,7 +90,8 @@ FormattedCheckpointCommonNames = {
     "Cartesian 3rd/4th derivatives" : "ForceDerivatives",
     "Vib-E2" : "VibrationalEnergies",
     "Vib-Modes" : "VibrationalModes",
-    "Vib-AtMass" : "VibrationalMasses"
+    "Vib-AtMass" : "VibrationalMasses",
+    "Real atomic weights" : "AtomicMasses"
 
 }
 

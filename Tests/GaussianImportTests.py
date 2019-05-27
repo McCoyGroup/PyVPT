@@ -91,3 +91,10 @@ class GaussianImportTests(TestCase):
             np.allclose(a, a.T, rtol=1e-08, atol=1e-08)
         )
 
+    @debugTest
+    def test_FchkMasses(self):
+        n = 3 # water
+        with GaussianFChkReader(self.test_fchk) as reader:
+            parse = reader.parse("AtomicMasses")
+        masses = parse["AtomicMasses"]
+        self.assertEquals(len(masses), n)
