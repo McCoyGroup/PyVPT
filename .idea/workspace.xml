@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b76b76cb-ce7f-4344-acde-240669f1c9ad" name="Default Changelist" comment="Schlooped out testing code">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="b76b76cb-ce7f-4344-acde-240669f1c9ad" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/Peeves" beforeDir="false" afterPath="$PROJECT_DIR$/Peeves" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tests/test_results.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/test_results.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/tests.py" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -81,9 +80,9 @@
         <counts>
           <entry key="Bash" value="93" />
           <entry key="C++" value="1511" />
-          <entry key="Markdown" value="3482" />
+          <entry key="Markdown" value="3503" />
           <entry key="Mathematica" value="9" />
-          <entry key="PLAIN_TEXT" value="614" />
+          <entry key="PLAIN_TEXT" value="624" />
           <entry key="Python" value="75369" />
           <entry key="YAML" value="24" />
         </counts>
@@ -103,7 +102,7 @@
           <entry key="C++" value="12" />
           <entry key="Markdown" value="4" />
           <entry key="Mathematica" value="2" />
-          <entry key="PLAIN_TEXT" value="18" />
+          <entry key="PLAIN_TEXT" value="19" />
           <entry key="Python" value="151" />
           <entry key="Scratch" value="1" />
           <entry key="YAML" value="1" />
@@ -143,11 +142,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Tests/tests.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="32" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
+            <state relative-caret-position="180">
+              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Tests/test_results.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
             </state>
           </provider>
         </entry>
@@ -182,12 +190,12 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="201">
-                <caret line="43" column="103" selection-start-line="43" selection-start-column="103" selection-end-line="43" selection-end-column="103" />
+              <first_editor relative-caret-position="419">
+                <caret line="57" column="86" selection-start-line="57" selection-start-column="86" selection-end-line="57" selection-end-column="86" />
               </first_editor>
               <second_editor>
                 <markdownNavigatorState />
@@ -267,7 +275,6 @@
         <option value="$PROJECT_DIR$/Utils/GaussianImport/GaussianFChkComponents.py" />
         <option value="$PROJECT_DIR$/PerturbationTheory/PerturbtationTheory.py" />
         <option value="$PROJECT_DIR$/Utils/GaussianImport/FChkDerivatives.py" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/Tests/TestUtils.py" />
         <option value="$PROJECT_DIR$/../Common/Peeves/run_tests.py" />
@@ -282,6 +289,7 @@
         <option value="$PROJECT_DIR$/Tests/test_results.txt" />
         <option value="$PROJECT_DIR$/Tests/run_tests.sh" />
         <option value="$PROJECT_DIR$/Tests/tests.py" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -673,7 +681,14 @@
       <option name="project" value="LOCAL" />
       <updated>1559025800508</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Schlooped out testing code...more">
+      <created>1559026033578</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1559026033578</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -763,7 +778,8 @@
     <MESSAGE value="Began expansion stuff" />
     <MESSAGE value="Removed stuff to prep for the submodule-ification" />
     <MESSAGE value="Schlooped out testing code" />
-    <option name="LAST_COMMIT_MESSAGE" value="Schlooped out testing code" />
+    <MESSAGE value="Schlooped out testing code...more" />
+    <option name="LAST_COMMIT_MESSAGE" value="Schlooped out testing code...more" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1003,18 +1019,6 @@
     <entry file="file://$PROJECT_DIR$/.gitmodules">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="201">
-            <caret line="43" column="103" selection-start-line="43" selection-start-column="103" selection-end-line="43" selection-end-column="103" />
-          </first_editor>
-          <second_editor>
-            <markdownNavigatorState />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Tests/TestUtils.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -1121,9 +1125,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/test_results.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/Tests/run_tests.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -1133,8 +1134,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Tests/tests.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="32" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
+        <state relative-caret-position="180">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/test_results.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="419">
+            <caret line="57" column="86" selection-start-line="57" selection-start-column="86" selection-end-line="57" selection-end-column="86" />
+          </first_editor>
+          <second_editor>
+            <markdownNavigatorState />
+          </second_editor>
         </state>
       </provider>
     </entry>

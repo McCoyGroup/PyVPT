@@ -55,7 +55,7 @@ The Python Vibrational Perturbation Theory package (PyVPT) is intended to make i
  - [ ] Write Spectrum class that can plot and analyze itself in intuitive ways like I already have in Mathematica
 
 ### Future
- - [ ] Break these packages into git submodules for others to use...
+ - [x] Break these packages into git submodules for others to use... (well on its way)
 
 ## Suggestions / Issues / Warnings
 
