@@ -4,7 +4,9 @@ Every type of tests should be its own module and should be tagged as either a de
 
 """
 
-# we'll put the parent dir on path
-import sys, os
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.dirname(__file__))))
-import PyVPT.Peeves.run_tests as rt # runs the tests
+if __name__ == "__main__":
+    # we'll put the parent dir on path
+    import sys, os
+    base_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+    sys.path.insert(0, base_dir)
+    import PyVPT.Peeves.run_tests as rt # runs the tests
