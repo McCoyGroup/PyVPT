@@ -2,10 +2,49 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b76b76cb-ce7f-4344-acde-240669f1c9ad" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/PerturbationTheory/PerturbtationTheory.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitmodules" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/GaussianImportTests.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/GaussianImportTests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Utils/GaussianImport/GaussianFChkComponents.py" beforeDir="false" afterPath="$PROJECT_DIR$/Utils/GaussianImport/GaussianFChkComponents.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coordinerds/CoordinateSystems/BaseCoordinateSystem.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coordinerds/CoordinateSystems/CommonCoordinateSystems.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coordinerds/CoordinateSystems/CoordinateSet.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coordinerds/CoordinateSystems/CoordinateSystem.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coordinerds/CoordinateSystems/CoordinateSystemConverter.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coordinerds/CoordinateSystems/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coordinerds/CoordinateTransformations/AffineTransform.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coordinerds/CoordinateTransformations/CoordinateTransform.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coordinerds/CoordinateTransformations/RotationTransform.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coordinerds/CoordinateTransformations/ScalingTransform.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coordinerds/CoordinateTransformations/TransformationFunction.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coordinerds/CoordinateTransformations/TransformationUtilities/EulerSystem.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coordinerds/CoordinateTransformations/TransformationUtilities/TransformationMatrices.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coordinerds/CoordinateTransformations/TransformationUtilities/TransformationTransformations.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coordinerds/CoordinateTransformations/TransformationUtilities/VectorOps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coordinerds/CoordinateTransformations/TransformationUtilities/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coordinerds/CoordinateTransformations/TranslationTransform.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coordinerds/CoordinateTransformations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coordinerds/Resources/Converters/CartesianToZMatrix.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coordinerds/Resources/Converters/ZMatrixToCartesian.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coordinerds/Resources/Mathematica/eulerSolver.wl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coordinerds/Utilities/ExtensionLoader.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coordinerds/Utilities/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coordinerds/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Utils/GaussianImport/FChkDerivatives.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Utils/GaussianImport/GaussianFChkComponents.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Utils/GaussianImport/GaussianImporter.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Utils/GaussianImport/GaussianLogComponents.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Utils/GaussianImport/ParserUtils.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Utils/GaussianImport/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Utils/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zachary/FiniteDifferenceFunction.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zachary/ZachLib/PyExtLib.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zachary/ZachLib/PyExtLib.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zachary/ZachLib/ZachLib.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zachary/ZachLib/ZachLib.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zachary/ZachLib/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zachary/ZachLib/lib.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zachary/ZachLib/setup.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zachary/__init__.py" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -81,10 +120,10 @@
         <counts>
           <entry key="Bash" value="63" />
           <entry key="C++" value="1511" />
-          <entry key="Markdown" value="2612" />
+          <entry key="Markdown" value="3482" />
           <entry key="Mathematica" value="9" />
-          <entry key="PLAIN_TEXT" value="483" />
-          <entry key="Python" value="72785" />
+          <entry key="PLAIN_TEXT" value="504" />
+          <entry key="Python" value="72966" />
           <entry key="YAML" value="24" />
         </counts>
       </usages-collector>
@@ -101,9 +140,9 @@
         <counts>
           <entry key="Bash" value="2" />
           <entry key="C++" value="12" />
-          <entry key="Markdown" value="3" />
+          <entry key="Markdown" value="4" />
           <entry key="Mathematica" value="2" />
-          <entry key="PLAIN_TEXT" value="15" />
+          <entry key="PLAIN_TEXT" value="16" />
           <entry key="Python" value="138" />
           <entry key="Scratch" value="1" />
           <entry key="YAML" value="1" />
@@ -113,34 +152,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Utils/GaussianImport/GaussianImporter.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="680">
-              <caret line="343" column="54" lean-forward="true" selection-start-line="343" selection-start-column="54" selection-end-line="343" selection-end-column="54" />
-              <folding>
-                <element signature="e#57#89#0" expanded="true" />
-                <element signature="e#646#5378#0" />
-                <element signature="e#5427#6403#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Utils/GaussianImport/ParserUtils.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="398">
-              <caret line="43" column="7" lean-forward="true" selection-start-line="43" selection-start-column="7" selection-end-line="43" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Tests/GaussianImportTests.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="496">
-              <caret line="72" column="35" lean-forward="true" selection-start-line="72" selection-start-column="35" selection-end-line="72" selection-end-column="35" />
+            <state relative-caret-position="211">
+              <caret line="53" column="38" lean-forward="true" selection-start-line="53" selection-start-column="38" selection-end-line="53" selection-end-column="38" />
               <folding>
                 <element signature="e#1#25#0" expanded="true" />
               </folding>
@@ -149,31 +165,20 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Utils/GaussianImport/GaussianFChkComponents.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="151">
-              <caret line="71" lean-forward="true" selection-start-line="71" selection-end-line="71" />
-              <folding>
-                <element signature="e#80#106#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/PerturbationTheory/PerturbtationTheory.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="481">
-              <caret line="77" lean-forward="true" selection-start-line="77" selection-end-line="77" />
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/.gitmodules">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Utils/GaussianImport/FChkDerivatives.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="117" column="25" selection-start-line="117" selection-start-column="8" selection-end-line="117" selection-end-column="25" />
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+            <state split_layout="FIRST">
+              <first_editor relative-caret-position="201">
+                <caret line="43" column="103" lean-forward="true" selection-start-line="43" selection-start-column="103" selection-end-line="43" selection-end-column="103" />
+              </first_editor>
+              <second_editor>
+                <markdownNavigatorState />
+              </second_editor>
             </state>
           </provider>
         </entry>
@@ -210,10 +215,6 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Zachary/FiniteDifferenceFunction.py" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/README.md" root0="FORCE_HIGHLIGHTING" />
-  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -236,7 +237,6 @@
         <option value="$PROJECT_DIR$/Zachary/ZachLib/lib.py" />
         <option value="$PROJECT_DIR$/Zachary/ZachLib/setup.py" />
         <option value="$PROJECT_DIR$/Zachary/__init__.py" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/Zachary/ZachLib/ZachLib.cpp" />
         <option value="$PROJECT_DIR$/Zachary/ZachLib/RynLib.cpp" />
         <option value="$PROJECT_DIR$/Zachary/FiniteDifferenceFunction.py" />
@@ -264,10 +264,11 @@
         <option value="$PROJECT_DIR$/Utils/GaussianImport/__init__.py" />
         <option value="$PROJECT_DIR$/Utils/GaussianImport/GaussianImporter.py" />
         <option value="$PROJECT_DIR$/Utils/GaussianImport/ParserUtils.py" />
-        <option value="$PROJECT_DIR$/Utils/GaussianImport/FChkDerivatives.py" />
         <option value="$PROJECT_DIR$/Utils/GaussianImport/GaussianFChkComponents.py" />
         <option value="$PROJECT_DIR$/Tests/GaussianImportTests.py" />
         <option value="$PROJECT_DIR$/PerturbationTheory/PerturbtationTheory.py" />
+        <option value="$PROJECT_DIR$/Utils/GaussianImport/FChkDerivatives.py" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -278,7 +279,7 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1887" />
+    <option name="x" value="-1894" />
     <option name="y" value="-157" />
     <option name="width" value="1782" />
     <option name="height" value="1057" />
@@ -297,32 +298,6 @@
             <path>
               <item name="PyVPT" type="b2602c69:ProjectViewProjectNode" />
               <item name="PyVPT" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PyVPT" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PyVPT" type="462c0819:PsiDirectoryNode" />
-              <item name="PerturbationTheory" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PyVPT" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PyVPT" type="462c0819:PsiDirectoryNode" />
-              <item name="Tests" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PyVPT" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PyVPT" type="462c0819:PsiDirectoryNode" />
-              <item name="Utils" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PyVPT" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PyVPT" type="462c0819:PsiDirectoryNode" />
-              <item name="Utils" type="462c0819:PsiDirectoryNode" />
-              <item name="GaussianImport" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PyVPT" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PyVPT" type="462c0819:PsiDirectoryNode" />
-              <item name="Zachary" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -647,7 +622,14 @@
       <option name="project" value="LOCAL" />
       <updated>1558930775576</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Began expansion stuff">
+      <created>1558975714505</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1558975714505</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -665,16 +647,16 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1887" y="-157" width="1782" height="1057" extended-state="0" />
+    <frame x="-1894" y="-157" width="1782" height="1057" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13333334" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13333334" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32953367" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4986945" visible="true" weight="0.31295338" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4986945" visible="true" weight="0.31295338" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -734,7 +716,8 @@
     <MESSAGE value="Patched cart to z multiconfig" />
     <MESSAGE value="Added Gaussian import stuff" />
     <MESSAGE value="Got my 4th derivs importing fine" />
-    <option name="LAST_COMMIT_MESSAGE" value="Got my 4th derivs importing fine" />
+    <MESSAGE value="Began expansion stuff" />
+    <option name="LAST_COMMIT_MESSAGE" value="Began expansion stuff" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -748,7 +731,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pre-commit-hook.sh" />
     <entry file="file://$PROJECT_DIR$/progress_log.md" />
     <entry file="file://$PROJECT_DIR$/Coordinerds/Utilities/ExtensionLoader.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -837,18 +819,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
           <caret line="30" column="32" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="135">
-            <caret line="9" column="5" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
-          </first_editor>
-          <second_editor>
-            <markdownNavigatorState />
-          </second_editor>
         </state>
       </provider>
     </entry>
@@ -1036,7 +1006,7 @@
     <entry file="file://$PROJECT_DIR$/Utils/GaussianImport/GaussianImporter.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="680">
-          <caret line="343" column="54" lean-forward="true" selection-start-line="343" selection-start-column="54" selection-end-line="343" selection-end-column="54" />
+          <caret line="343" column="54" selection-start-line="343" selection-start-column="54" selection-end-line="343" selection-end-column="54" />
           <folding>
             <element signature="e#57#89#0" expanded="true" />
             <element signature="e#646#5378#0" />
@@ -1055,24 +1025,14 @@
     <entry file="file://$PROJECT_DIR$/Utils/GaussianImport/ParserUtils.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="398">
-          <caret line="43" column="7" lean-forward="true" selection-start-line="43" selection-start-column="7" selection-end-line="43" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/GaussianImportTests.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="496">
-          <caret line="72" column="35" lean-forward="true" selection-start-line="72" selection-start-column="35" selection-end-line="72" selection-end-column="35" />
-          <folding>
-            <element signature="e#1#25#0" expanded="true" />
-          </folding>
+          <caret line="43" column="7" selection-start-line="43" selection-start-column="7" selection-end-line="43" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Utils/GaussianImport/GaussianFChkComponents.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="151">
-          <caret line="71" lean-forward="true" selection-start-line="71" selection-end-line="71" />
+          <caret line="71" selection-start-line="71" selection-end-line="71" />
           <folding>
             <element signature="e#80#106#0" expanded="true" />
           </folding>
@@ -1081,15 +1041,40 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Utils/GaussianImport/FChkDerivatives.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="117" column="25" selection-start-line="117" selection-start-column="8" selection-end-line="117" selection-end-column="25" />
+        <state relative-caret-position="451">
+          <caret line="131" column="35" selection-start-line="131" selection-start-column="35" selection-end-line="131" selection-end-column="35" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PerturbationTheory/PerturbtationTheory.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="481">
-          <caret line="77" lean-forward="true" selection-start-line="77" selection-end-line="77" />
+        <state relative-caret-position="316">
+          <caret line="67" column="33" lean-forward="true" selection-start-line="67" selection-start-column="33" selection-end-line="67" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitmodules">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="201">
+            <caret line="43" column="103" lean-forward="true" selection-start-line="43" selection-start-column="103" selection-end-line="43" selection-end-column="103" />
+          </first_editor>
+          <second_editor>
+            <markdownNavigatorState />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/GaussianImportTests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="53" column="38" lean-forward="true" selection-start-line="53" selection-start-column="38" selection-end-line="53" selection-end-column="38" />
+          <folding>
+            <element signature="e#1#25#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

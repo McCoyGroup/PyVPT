@@ -33,18 +33,29 @@ The Python Vibrational Perturbation Theory package (PyVPT) is intended to make i
  - [ ] Implement Cartesian <-> Spherical conversions
  - [ ] Implement ZMatrix <-> Spherical conversions?
 
-### Expansions
+### Molecules
+ - [x] Write efficient Gaussian Log File importer
+ - [x] Write efficient Gaussian fchk file importer
+ - [ ] Write convenience type representing molecular modes
+ - [ ] Create efficient importer of all relevant molecule data from Gaussian job data
+ - [ ] Create efficient constructor of all molecule data from scan (for use with psi4)
  
- - [x] Implement arbitrary order finite differencing (still needs higher-dimensional extension)
- - [ ] Provide utility type representing function over a coordinate set
+### Expansions
+ - [x] Implement arbitrary order finite differencing (higher-dimensional extension needs testing still)
+ - [ ] Provide utility type representing function over a coordinate set (useful for potentials)
  - [ ] Implement actual expression for a fourth-order potential expansion (make C-compileable...?)
 
 ### Perturbation Theory
- 
- - [ ] Write efficient Gaussian Log File importer (in process)
  - [ ] Get potential expansions with Gaussian potential / force consts
+ - [ ] Write code to handle directly from potential scan
  - [ ] Implement proper exprs for perturbation expansions
+ 
+### Wavefunctions / Spectra
+ - [ ] Write flexible Wavefunction metaclass that can be subclassed for DVR, DMC, and VPT2
+ - [ ] Write Spectrum class that can plot and analyze itself in intuitive ways like I already have in Mathematica
 
+### Future
+ - [ ] Break these packages into git submodules for others to use...
 
 ## Suggestions / Issues / Warnings
 
