@@ -91,7 +91,7 @@ class GaussianImportTests(TestCase):
             np.allclose(a, a.T, rtol=1e-08, atol=1e-08)
         )
 
-    @debugTest
+    @validationTest
     def test_FchkMasses(self):
         n = 3 # water
         with GaussianFChkReader(self.test_fchk) as reader:
