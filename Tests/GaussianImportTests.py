@@ -1,6 +1,6 @@
 
 from ..Peeves.TestUtils import *
-from ..Utils.GaussianImport import *
+from ..McUtils.GaussianImport import *
 import sys, os
 
 class GaussianImportTests(TestCase):
