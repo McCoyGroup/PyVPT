@@ -1,6 +1,6 @@
 
 from .TestUtils import *
-from ..Zachary import *
+from ..Utils.Zachary import *
 import sys
 
 class FiniteDifferenceTests(TestCase):
