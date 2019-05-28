@@ -1,0 +1,12 @@
+[submodule "Peeves"]
+	path = Peeves
+	url = https://github.com/McCoyGroup/Peeves.git
+[submodule "Molecools"]
+	path = Molecools
+	url = https://github.com/McCoyGroup/Molecools.git
+[submodule "McUtils"]
+	path = McUtils
+	url = https://github.com/McCoyGroup/McUtils.git
+[submodule "Coordinerds"]
+	path = Coordinerds
+	url = https://github.com/McCoyGroup/Coordinerds.git

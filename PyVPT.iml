@@ -3,6 +3,10 @@
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
     <content url="file://$MODULE_DIR$" />
+    <content url="file://$MODULE_DIR$/../Python/Coordinerds" />
+    <content url="file://$MODULE_DIR$/../Python/McUtils" />
+    <content url="file://$MODULE_DIR$/../Python/Molecools" />
+    <content url="file://$MODULE_DIR$/../Python/Peeves" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>

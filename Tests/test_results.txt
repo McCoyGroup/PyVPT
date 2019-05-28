@@ -41,6 +41,6 @@ test_mat_dim (PyVPT.Tests.CoordinateTests.TestAffineMatrix) ... ok
 test_mat_mul (PyVPT.Tests.CoordinateTests.TestAffineMatrix) ... ok
 
 ----------------------------------------------------------------------
-Ran 26 tests in 6.277s
+Ran 26 tests in 6.094s
 
 OK
