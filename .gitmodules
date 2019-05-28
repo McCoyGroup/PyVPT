@@ -4,3 +4,6 @@
 [submodule "Coordinerds"]
 	path = Coordinerds
 	url = https://github.com/McCoyGroup/Coordinerds.git
+[submodule "Molecools"]
+	path = Molecools
+	url = https://github.com/McCoyGroup/Molecools.git
