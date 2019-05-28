@@ -7,3 +7,6 @@
 [submodule "Molecools"]
 	path = Molecools
 	url = https://github.com/McCoyGroup/Molecools.git
+[submodule "Peeves"]
+	path = Peeves
+	url = https://github.com/McCoyGroup/Peeves.git

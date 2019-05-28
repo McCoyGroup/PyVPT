@@ -1,5 +1,5 @@
 
-from .TestUtils import *
+from ..Peeves.TestUtils import *
 from ..Utils.Zachary import *
 import sys
 

@@ -1,14 +1,14 @@
 
-from .TestUtils import *
+from ..Peeves.TestUtils import *
 from ..Utils.GaussianImport import *
 import sys, os
 
 class GaussianImportTests(TestCase):
 
-    test_log_water = test_data("water_OH_scan.log")
-    test_log_freq = test_data("water_freq.log")
-    test_fchk = test_data("water_freq.fchk")
-    test_log_h2 = test_data("outer_H2_scan_new.log")
+    test_log_water = TestManager.test_data("water_OH_scan.log")
+    test_log_freq = TestManager.test_data("water_freq.log")
+    test_fchk = TestManager.test_data("water_freq.fchk")
+    test_log_h2 = TestManager.test_data("outer_H2_scan_new.log")
 
     @validationTest
     def test_GaussianLoad(self):
