@@ -2,49 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b76b76cb-ce7f-4344-acde-240669f1c9ad" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitmodules" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coordinerds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Utils" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitmodules" beforeDir="false" afterPath="$PROJECT_DIR$/.gitmodules" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coordinerds/CoordinateSystems/BaseCoordinateSystem.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coordinerds/CoordinateSystems/CommonCoordinateSystems.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coordinerds/CoordinateSystems/CoordinateSet.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coordinerds/CoordinateSystems/CoordinateSystem.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coordinerds/CoordinateSystems/CoordinateSystemConverter.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coordinerds/CoordinateSystems/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coordinerds/CoordinateTransformations/AffineTransform.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coordinerds/CoordinateTransformations/CoordinateTransform.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coordinerds/CoordinateTransformations/RotationTransform.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coordinerds/CoordinateTransformations/ScalingTransform.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coordinerds/CoordinateTransformations/TransformationFunction.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coordinerds/CoordinateTransformations/TransformationUtilities/EulerSystem.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coordinerds/CoordinateTransformations/TransformationUtilities/TransformationMatrices.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coordinerds/CoordinateTransformations/TransformationUtilities/TransformationTransformations.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coordinerds/CoordinateTransformations/TransformationUtilities/VectorOps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coordinerds/CoordinateTransformations/TransformationUtilities/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coordinerds/CoordinateTransformations/TranslationTransform.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coordinerds/CoordinateTransformations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coordinerds/Resources/Converters/CartesianToZMatrix.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coordinerds/Resources/Converters/ZMatrixToCartesian.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coordinerds/Resources/Mathematica/eulerSolver.wl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coordinerds/Utilities/ExtensionLoader.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coordinerds/Utilities/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coordinerds/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Utils/GaussianImport/FChkDerivatives.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Utils/GaussianImport/GaussianFChkComponents.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Utils/GaussianImport/GaussianImporter.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Utils/GaussianImport/GaussianLogComponents.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Utils/GaussianImport/ParserUtils.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Utils/GaussianImport/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Utils/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zachary/FiniteDifferenceFunction.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zachary/ZachLib/PyExtLib.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zachary/ZachLib/PyExtLib.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zachary/ZachLib/ZachLib.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zachary/ZachLib/ZachLib.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zachary/ZachLib/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zachary/ZachLib/lib.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zachary/ZachLib/setup.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zachary/__init__.py" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -122,7 +84,7 @@
           <entry key="C++" value="1511" />
           <entry key="Markdown" value="3482" />
           <entry key="Mathematica" value="9" />
-          <entry key="PLAIN_TEXT" value="504" />
+          <entry key="PLAIN_TEXT" value="584" />
           <entry key="Python" value="72966" />
           <entry key="YAML" value="24" />
         </counts>
@@ -142,7 +104,7 @@
           <entry key="C++" value="12" />
           <entry key="Markdown" value="4" />
           <entry key="Mathematica" value="2" />
-          <entry key="PLAIN_TEXT" value="16" />
+          <entry key="PLAIN_TEXT" value="17" />
           <entry key="Python" value="138" />
           <entry key="Scratch" value="1" />
           <entry key="YAML" value="1" />
@@ -152,14 +114,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Tests/GaussianImportTests.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="211">
-              <caret line="53" column="38" lean-forward="true" selection-start-line="53" selection-start-column="38" selection-end-line="53" selection-end-column="38" />
+            <state relative-caret-position="496">
+              <caret line="72" column="35" selection-start-line="72" selection-start-column="35" selection-end-line="72" selection-end-column="35" />
               <folding>
                 <element signature="e#1#25#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="5" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -174,7 +145,7 @@
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="FIRST">
               <first_editor relative-caret-position="201">
-                <caret line="43" column="103" lean-forward="true" selection-start-line="43" selection-start-column="103" selection-end-line="43" selection-end-column="103" />
+                <caret line="43" column="103" selection-start-line="43" selection-start-column="103" selection-end-line="43" selection-end-column="103" />
               </first_editor>
               <second_editor>
                 <markdownNavigatorState />
@@ -228,7 +199,6 @@
         <option value="$PROJECT_DIR$/Tests/run_tests.sh" />
         <option value="$PROJECT_DIR$/Tests/test_results.txt" />
         <option value="$PROJECT_DIR$/PerturbationTheory/GaussianImporter.py" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/PerturbationTheory/GaussianImport/log_file_tags.py" />
         <option value="$PROJECT_DIR$/ZacharyBlowingUp/__init__.py" />
         <option value="$PROJECT_DIR$/Zachary/FiniteDifference.py" />
@@ -269,6 +239,7 @@
         <option value="$PROJECT_DIR$/PerturbationTheory/PerturbtationTheory.py" />
         <option value="$PROJECT_DIR$/Utils/GaussianImport/FChkDerivatives.py" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -629,7 +600,14 @@
       <option name="project" value="LOCAL" />
       <updated>1558975714505</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Removed stuff to prep for the submodule-ification">
+      <created>1559021377368</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1559021377368</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -650,13 +628,13 @@
     <frame x="-1894" y="-157" width="1782" height="1057" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13333334" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13333334" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32953367" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4986945" visible="true" weight="0.31295338" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4986945" visible="true" weight="0.31295338" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -717,7 +695,8 @@
     <MESSAGE value="Added Gaussian import stuff" />
     <MESSAGE value="Got my 4th derivs importing fine" />
     <MESSAGE value="Began expansion stuff" />
-    <option name="LAST_COMMIT_MESSAGE" value="Began expansion stuff" />
+    <MESSAGE value="Removed stuff to prep for the submodule-ification" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed stuff to prep for the submodule-ification" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -960,13 +939,6 @@
         <state relative-caret-position="-1643" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Tests/TestData/water_OH_scan.log">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="253">
@@ -1060,7 +1032,7 @@
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="FIRST">
           <first_editor relative-caret-position="201">
-            <caret line="43" column="103" lean-forward="true" selection-start-line="43" selection-start-column="103" selection-end-line="43" selection-end-column="103" />
+            <caret line="43" column="103" selection-start-line="43" selection-start-column="103" selection-end-line="43" selection-end-column="103" />
           </first_editor>
           <second_editor>
             <markdownNavigatorState />
@@ -1070,11 +1042,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Tests/GaussianImportTests.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="53" column="38" lean-forward="true" selection-start-line="53" selection-start-column="38" selection-end-line="53" selection-end-column="38" />
+        <state relative-caret-position="496">
+          <caret line="72" column="35" selection-start-line="72" selection-start-column="35" selection-end-line="72" selection-end-column="35" />
           <folding>
             <element signature="e#1#25#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="5" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
         </state>
       </provider>
     </entry>

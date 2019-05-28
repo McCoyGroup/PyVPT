@@ -1,0 +1,6 @@
+[submodule "Utils"]
+	path = Utils
+	url = https://github.com/McCoyGroup/McUtils.git
+[submodule "Coordinerds"]
+	path = Coordinerds
+	url = https://github.com/McCoyGroup/Coordinerds.git

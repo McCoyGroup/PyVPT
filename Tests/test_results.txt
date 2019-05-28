@@ -1,0 +1,46 @@
+
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+Running Debug Tests:
+
+test_FchkMasses (PyVPT.Tests.GaussianImportTests.GaussianImportTests) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.023s
+
+OK
+
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+Running Validation Tests:
+
+test_CartesianToZMatrix (PyVPT.Tests.ConverterTests.ConverterTest) ... ok
+test_CartesianToZMatrixAndBack (PyVPT.Tests.ConverterTests.ConverterTest) ... ok
+test_CartesianToZMatrixMulti (PyVPT.Tests.ConverterTests.ConverterTest) ... ok
+test_CoordinateSet (PyVPT.Tests.ConverterTests.ConverterTest) ... ok
+test_GetDihedrals (PyVPT.Tests.ConverterTests.ConverterTest) ... ok
+test_Loader (PyVPT.Tests.ConverterTests.ConverterTest) ... ok
+test_ZMatrixToCartesian (PyVPT.Tests.ConverterTests.ConverterTest) ... ok
+test_bin_gs (PyVPT.Tests.FiniteDifferenceTests.FiniteDifferenceTests) ... ok
+test_bins (PyVPT.Tests.FiniteDifferenceTests.FiniteDifferenceTests) ... ok
+test_facs (PyVPT.Tests.FiniteDifferenceTests.FiniteDifferenceTests) ... ok
+test_fd_weights (PyVPT.Tests.FiniteDifferenceTests.FiniteDifferenceTests) ... ok
+test_finite_difference (PyVPT.Tests.FiniteDifferenceTests.FiniteDifferenceTests) ... ok
+test_stirs (PyVPT.Tests.FiniteDifferenceTests.FiniteDifferenceTests) ... ok
+test_uneven_weights (PyVPT.Tests.FiniteDifferenceTests.FiniteDifferenceTests) ... ok
+test_Fchk (PyVPT.Tests.GaussianImportTests.GaussianImportTests) ... ok
+test_ForceConstants (PyVPT.Tests.GaussianImportTests.GaussianImportTests) ... ok
+test_ForceFourthDerivatives (PyVPT.Tests.GaussianImportTests.GaussianImportTests) ... ok
+test_ForceThirdDerivatives (PyVPT.Tests.GaussianImportTests.GaussianImportTests) ... ok
+test_GZMatCoords (PyVPT.Tests.GaussianImportTests.GaussianImportTests) ... ok
+test_GZMatCoordsBiggie (PyVPT.Tests.GaussianImportTests.GaussianImportTests) ... ok
+test_GaussianCartesians (PyVPT.Tests.GaussianImportTests.GaussianImportTests) ... ok
+test_GaussianLoad (PyVPT.Tests.GaussianImportTests.GaussianImportTests) ... ok
+test_affine_mats (PyVPT.Tests.CoordinateTests.TestAffineMatrix) ... ok
+test_mat_dim (PyVPT.Tests.CoordinateTests.TestAffineMatrix) ... ok
+test_mat_mul (PyVPT.Tests.CoordinateTests.TestAffineMatrix) ... ok
+
+----------------------------------------------------------------------
+Ran 25 tests in 5.941s
+
+OK
