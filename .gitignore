@@ -3,6 +3,7 @@
 Tests/TestData
 .DS_Store
 .idea
+.git
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
