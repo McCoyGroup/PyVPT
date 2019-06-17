@@ -48,6 +48,7 @@ class PerturbationExpansion:
                                           thirds.shape,
                                           (3*n-6, 3*n, 3*n)
                                           )
+        # this might need to change in the future
         if fourths.shape != (3*n-6, 3*n, 3*n):
             raise PerturbationTheoryError("{}.{}: dimension of third derivative array ({2[0]}x{2[1]}x{2[2]}) is not {3[0]}x{3[1]}x{3[2]}",
                                           type(self).__name__,
@@ -56,6 +57,14 @@ class PerturbationExpansion:
                                           (3*n-6, 3*n, 3*n)
                                           )
         return (thirds, fourths)
+
+    def _get_internals(self):
+        """Returns the internal coordinates
+
+        :return:
+        :rtype:
+        """
+        pass
 
     def internalize_force_constants(self):
         """Converts the force_constant data to an internal coordinate representation

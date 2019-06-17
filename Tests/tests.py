@@ -9,4 +9,5 @@ if __name__ == "__main__":
     import sys, os
     base_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
     sys.path.insert(0, base_dir)
-    import PyVPT.Peeves.run_tests as rt # runs the tests
+    from PyVPT.Peeves import TestManager
+    TestManager.run()
