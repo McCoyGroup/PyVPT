@@ -1,5 +1,6 @@
-"""The PyVPT package provides a few chunks of functionality that may or may not get jailbroken at some point
-
-TODO: actually describe all the shit that's here
-
+"""
+PyVPT:
+    provides a class for doing (2nd order) vibrational perturbation theory in python
+    builds off of resource packages to handle most of the dirty work and just does the actual potential expansions
+    and pertubation theory computations
 """

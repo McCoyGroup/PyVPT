@@ -1,4 +1,4 @@
-from .LazyTensors import Tensor
+from McUtils.Zachary.LazyTensors import Tensor
 
 ########################################################################################################################
 #
