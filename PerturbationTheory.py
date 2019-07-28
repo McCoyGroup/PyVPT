@@ -239,11 +239,11 @@ class PerturbationTheoryHamiltonian:
 
     # TODO: gotta actually include the coefficients somehow...?
     def pQp(self,
-                        coefficients,
-                        dimensions,
-                        pmatrix = None,
-                        qmatrix = None
-                        ):
+            coefficients,
+            dimensions,
+            pmatrix = None,
+            qmatrix = None
+            ):
 
         if pmatrix is None:
             pmatrix = self.pmatrix_ho
